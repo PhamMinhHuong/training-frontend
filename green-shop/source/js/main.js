@@ -9,12 +9,12 @@ $(function(){
     $('.menu__overlay, .menu__content').toggleClass('active');
   });
 
-  $('.header__expand-search').hide();
+  $('.expand-search').hide();
   $('.expand__search').click(function(){
-    $('.header__expand-search').show();
+    $('.expand-search').show();
   })
   $('.expand-search__btn').click(function(){
-    $('.header__expand-search').hide();
+    $('.expand-search').hide();
   })
   $('.slider').slick({
     dots: true,

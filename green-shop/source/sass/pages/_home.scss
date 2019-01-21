@@ -3,28 +3,71 @@
 // ======================================================
 
 .slider {
+  width: 100%;
+  height: 580px;
 
   &__image {
     width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  @include respond-to(tablet-and-down) {
+    height: 350px;
+  }
+
+  @include respond-to(smallphone-and-down) {
+    height: 220px;
   }
 }
 
-.wrapper {
+.product {
   @extend %wrapper;
 
   flex-flow: column nowrap;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 
-.product {
-  width: 100%;
+  &__spotlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__hot {
+    margin-bottom: 50px;
+  }
 
   &__grid {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 50px;
+    &--spotlight {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--best {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 50px;
+    }
+
+    &--discount {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    &--hot {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+    }
   }
 
   &__item {
@@ -41,6 +84,7 @@
   &__image-wrapper {
     width: 100%;
     position: relative;
+    margin-bottom: 20px;
   }
 
   &__overlay {
@@ -54,6 +98,10 @@
     transform-origin: center;
     opacity: 0;
     transition: all .3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__image {
@@ -92,8 +140,7 @@
   }
 
   &__name {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: $font-size-lg;
     color: $black;
     transition: all .3s ease;
     &:hover {
@@ -103,13 +150,13 @@
   }
 
   &__star {
-    margin-bottom: 5px;
+    margin: 5px 0;
     color: $yellow;
   }
 
   &__price {
     color: $red;
-    font-size: 18px;
+    font-size: $font-size-xl;
     font-family: 'Roboto Slab', sans-serif;
     margin-bottom: 20px;
   }
@@ -117,7 +164,7 @@
   &__del {
     color: $gray;
     margin-left: 15px;
-    font-size: 14px;
+    font-size: $font-size-sm;
     text-decoration: line-through;
   }
 
@@ -134,7 +181,7 @@
   }
 
   &__buy {
-    font-size: 13px;
+    font-size: $font-size-sm;
     color: $white;
     height: 40px;
     border-radius: 20px;
@@ -152,7 +199,7 @@
   }
 
   &__search {
-    font-size: 12px;
+    font-size: $font-size-base;
     margin-left: 10px;
     width: 40px;
     height: 40px;
@@ -163,25 +210,73 @@
     justify-content: center;
   }
 
-  &__grid-sale {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+  @include respond-to(tablet-and-down) {
+    &__spotlight {
+      grid-gap: 20px;
+    }
 
-    @include respond-to(tablet-and-down) {
-      grid-template-columns: repeat(2, 1fr);
+    &__best {
+      padding-right: 10px;
+    }
+
+    &__discount {
+      padding-left: 10px;
+    }
+
+    &__grid {
+      &--spotlight {
+        grid-gap: 20px;
+      }
+
+      &--discount {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      &--hot {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
     }
   }
 
-  &__grid-best {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-bottom: 50px;
-  }
+  @include respond-to(phone-and-down) {
+    &__spotlight {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
 
-  &__banner {
-    width: 100%;
-    margin: 30px 0 50px 0;
+    &__best {
+      padding-right: 15px;
+    }
+
+    &__discount {
+      padding-left: 15px;
+    }
+
+    &__grid {
+      &--spotlight {
+        grid-gap: 10px;
+      }
+
+      &--discount {
+        grid-gap: 10px;
+      }
+
+      &--hot {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+    }
+
+    &__price {
+      font-size: $font-size-sm;
+    }
+
+    &__del {
+      display: block;
+      margin: auto;
+    }
   }
 }
 
@@ -191,6 +286,10 @@
   @include respond-to(phone-and-down) {
     height: 200px;
   }
+
+  @include respond-to(smallphone-and-down) {
+    height: 150px;
+  }
 }
 
 .product__item--big .product__image-wrapper {
@@ -199,49 +298,46 @@
   @include respond-to(phone-and-down) {
     height: 400px;
   }
+
+  @include respond-to(smallphone-and-down) {
+    height: 300px;
+  }
 }
 
-.product__overlay:hover {
-  opacity: 1;
-}
-
-.product__spotlight .title {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.product__hotnew .title {
-  margin-left: 15px;
-  margin-right: 15px;
-}
 
 .product__hotnew .product__grid {
   grid-template-columns: repeat(4, 1fr);
 
   @include respond-to(tablet-and-down) {
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
   }
 
   @include respond-to(phone-and-down) {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
 }
 
 .product__item--small {
   padding: 15px;
   flex-flow: row nowrap;
+  min-width: 100px;
 
   .product__image-wrapper {
     width: 70px;
     height: 70px;
+    margin-bottom: 0;
   }
 
   .product__name {
-    font-size: 14px;
+    font-size: $font-size-sm;
+    text-align: left;
   }
 
   .product__price {
-    font-size: 14px;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
   }
 
   .product__del {
@@ -259,9 +355,31 @@
     align-items: flex-start;
     padding-left: 15px;
   }
+
+  @include respond-to(tablet-and-down) {
+    padding: 2px;
+    margin-bottom: 2px;
+
+    .product__name {
+      font-size: $font-size-base;
+    }
+
+    .product__price {
+      font-size: $font-size-base;
+    }
+
+    .product__star {
+      margin: 0;
+    }
+  }
 }
 
 .new {
+  @extend %wrapper;
+
+  flex-flow: column nowrap;
+  margin-bottom: 50px;
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -287,7 +405,7 @@
 
   &__date {
     font-style: italic;
-    font-size: 12px;
+    font-size: $font-size-base;
     font-family: 'Roboto Slab', sans-serif;
     color: $gray;
     margin-bottom: 20px;
@@ -295,8 +413,8 @@
 
   &__title {
     color: $green;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: $semibold;
+    font-size: $font-size-sm;
     margin-bottom: 10px;
 
     &:hover {
@@ -305,7 +423,7 @@
   }
 
   &__des {
-    font-size: 13px;
+    font-size: $font-size-sm;
     color: $gray;
     margin-bottom: 15px;
   }
@@ -313,7 +431,7 @@
   &__readmore {
     color: $green;
     font-style: italic;
-    font-size: 12px;
+    font-size: $font-size-base;
 
     &:hover {
       color: $green;
@@ -330,5 +448,13 @@
     &__grid {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+.banner {
+  margin-bottom: 50px;
+
+  &__image {
+    width: 100%;
   }
 }

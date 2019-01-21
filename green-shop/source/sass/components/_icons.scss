@@ -4,19 +4,16 @@
 
 .icon {
   &--xs {
-    font-size: 10px;
+    font-size: $icon-size-xs;
   }
   &--sm {
-    font-size: 12px;
+    font-size: $icon-size-sm;
   }
   &--md {
-    font-size: 16px;
+    font-size: $icon-size-md;
   }
   &--lg {
-    font-size: 20px;
-  }
-  &--xl {
-    font-size: 30px;
+    font-size: $icon-size-lg;
   }
   &--yellow {
     color: $yellow;

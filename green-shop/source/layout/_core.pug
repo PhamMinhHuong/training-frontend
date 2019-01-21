@@ -3,9 +3,9 @@ include ../modules/_head
 include ../modules/_plugin
 include ../modules/_buttons
 include ../modules/_icons
-include ../styleguides/_title
-include ../styleguides/_product
-include ../styleguides/_new
+include ../modules/_title
+include ../modules/_product
+include ../modules/_new
 
 doctype html
 html(lang='en')
@@ -13,5 +13,4 @@ html(lang='en')
     block head
   body
     block body
-      
-    script(src="js/main.js")
+  +plugins()

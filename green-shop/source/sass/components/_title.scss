@@ -9,8 +9,8 @@
     position: relative;
     margin-bottom: 0;
     padding-bottom: 15px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: $font-size-lg;
+    font-weight: $semibold;
 
     &:before {
       @include pseudo;

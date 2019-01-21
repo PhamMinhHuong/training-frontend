@@ -43,7 +43,7 @@
 
   &__copyright {
     padding: 15px 0;
-    font-size: 14px;
+    font-size: $font-size-sm;
     color: $gray-light;
     background: $black-lighter;
   }
@@ -55,9 +55,9 @@
 
   &__text {
     color: $gray;
-    font-size: 14px;
+    font-size: $font-size-sm;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: $semibold;
   }
 
   &__list {
@@ -100,10 +100,10 @@
   align-items: flex-start;
 
   &__text {
-    font-size: 14px;
+    font-size: $font-size-sm;
     color: $gray;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: $semibold;
     width: 155px;
   }
 
@@ -172,11 +172,11 @@
     color: $gray-light;
     margin-bottom: 10px;
     line-height: 23px;
-    font-size: 12px;
+    font-size: $font-size-base;
   }
 
   &__icon {
-    font-size: 10px;
+    font-size: $font-size-xs;
     color: $green;
     margin-right: 5px;
   }
@@ -211,8 +211,8 @@
   &__btn {
     color: $gray-light;
     padding-left: 0;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: $font-size-base;
+    font-weight: $normal;
     text-align: left;
 
     &:hover {
@@ -242,6 +242,7 @@
 
     &__block {
       width: 100%;
+      margin-bottom: 30px;
     }
   }
 }
@@ -252,7 +253,7 @@
 
   &__btn {
     color: $gray-light;
-    font-size: 12px;
+    font-size: $font-size-base;
 
     &:hover {
       color: $gray-light;

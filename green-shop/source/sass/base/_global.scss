@@ -23,10 +23,13 @@ p {
   max-width: 1140px;
   margin: auto;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
 
   @include respond-to(desktop-and-down) {
     padding: 0 15px;
   }
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
 }

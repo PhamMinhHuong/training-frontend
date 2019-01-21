@@ -1,14 +1,14 @@
-header.header
-  .header__top--outer.d-none.d-md-block
-    .header__top--inner
-      .header__open-time.open-time
+header
+  .header-top.d-none.d-md-block
+    .header-top__content
+      .header-top__open-time.open-time
         +icons({
           iconFont: 'far fa-clock',
           iconSize: 'sm',
           iconColor: 'gray'})
         p.open-time__text Open time: 8:00 - 18:00
           span.open-time__span Monday - Sunday
-      ul.header__social.social
+      ul.header-top__social.social
         li.social__item
           +buttons-link({
             href: '#',
@@ -37,7 +37,7 @@ header.header
             iconFont: 'fab fa-vimeo-v',
             iconSize: 'sm',
             iconColor: 'gray'})
-      ul.header__account.account.ml-auto
+      ul.header-top__account.account.ml-auto
         li.account__item 
           +buttons-link({
             href: '#',
@@ -58,12 +58,12 @@ header.header
             iconSize: 'sm',
             iconColor: 'gray',
           })
-  .header__middle--outer
-    .header__middle--inner
-      .header__logo.logo
-        a(href="#")
+  .header-middle
+    .header-middle__content
+      .header-middle__logo.logo
+        a.logo__wrapper(href="#")
           img.logo__image(src="../images/logo.png", alt="Logo")
-      form.header__search.search.ml-auto.d-none.d-md-flex
+      form.header-middle__search.search.ml-auto.d-none.d-md-flex
         .search__contact
           +icons({
             iconFont: 'fas fa-phone',
@@ -77,16 +77,16 @@ header.header
             iconFont: 'fas fa-search',
             iconSize: 'sm',
             iconColor: 'black'})
-      .header__cart.cart.d-none.d-md-flex
+      .header-middle__cart.cart.d-none.d-md-flex
         +icons({
           iconFont: 'fas fa-shopping-basket',
           iconSize: 'lg',
           iconColor: 'black'})
         a.cart__text(href='#') 0 sản phẩm
-  .header__bottom--outer
-    .header__bottom--inner
-      nav.header__navbar.navbar
-        .header__menu.menu
+  .header-bottom
+    .header-bottom__content
+      nav.header-bottom__navbar.navbar
+        .navbar__menu.menu
           +buttons({
             btnClass: 'menu__btn',
             iconFont: 'fas fa-bars',
@@ -170,7 +170,7 @@ header.header
               href: '#',
               btnClass: 'nav__btn',
               text: 'Liên hệ'})
-        .header__expand.expand
+        .header-bottom__expand.expand
           +buttons({
             btnClass: 'expand__search d-flex d-md-none ml-auto',
             iconFont: 'fas fa-search',
@@ -181,7 +181,7 @@ header.header
             iconFont: 'fas fa-shopping-basket',
             iconSize: 'lg',
             iconColor: 'white'})
-      form.header__expand-search.expand-search
+      form.header-bottom__expand-search.expand-search
         input.expand-search__input(placeholder="Tìm kiếm...")
         +buttons-link({
           btnClass: 'expand-search__btn',
