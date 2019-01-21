@@ -37,7 +37,7 @@
     "gulp-stylelint": "^6.0.0",
     "gulp-watch": "^4.3.9",
     "install": "^0.8.1",
-    "jquery": "2.2.1",
+    "jquery": "^2.2.1",
     "jstransformer-markdown-it": "^2.0.0",
     "npm": "^3.10.6",
     "pug": "^2.0.0-beta6",
@@ -47,5 +47,8 @@
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",
     "stylelint-scss": "^2.3.0"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }

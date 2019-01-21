@@ -2,28 +2,55 @@
 //- Modules :: Buttons
 //-------------------------------------------------------
 
-mixin buttons({ text, type, size, isFull, iconFont, iconImage })
-  button.btn.button(
-    class= type ? `button--${type}` : null
-    class= size ? `button--${size}` : null
-    class= (isFull === true) ? 'button--full' : null
-  )&attributes(attributes)
-    if (iconFont !== '' && iconFont !== undefined)
-      +icon-fonts(iconFont)(class='button__icon')
-    if (iconImage !== '' && iconImage !== undefined)
-      +icon-images(iconImage)(class='button__icon')
-    | #{text}
+//- mixin buttons({ text, type, size, isFull, iconFont, iconImage })
+//-   button.btn.button(
+//-     class= type ? `button--${type}` : null
+//-     class= size ? `button--${size}` : null
+//-     class= (isFull === true) ? 'button--full' : null
+//-   )&attributes(attributes)
+//-     if (iconFont !== '' && iconFont !== undefined)
+//-       +icon-fonts(iconFont)(class='button__icon')
+//-     if (iconImage !== '' && iconImage !== undefined)
+//-       +icon-images(iconImage)(class='button__icon')
+//-     | #{text}
 
-mixin buttons-link({ href, text, type, size, isFull, iconFont, iconImage })
-  a.btn.button(
-    class= type ? `button--${type}` : null
-    class= size ? `button--${size}` : null
-    class= (isFull === true) ? 'button--full' : null
+//- mixin buttons-link({ href, text, type, size, isFull, iconFont, iconImage })
+//-   a.btn.button(
+//-     class= type ? `button--${type}` : null
+//-     class= size ? `button--${size}` : null
+//-     class= (isFull === true) ? 'button--full' : null
+//-     href= href ? href : '#'
+//-     role='button'
+//-   )&attributes(attributes)
+//-     if (iconFont !== '' && iconFont !== undefined)
+//-       +icon-fonts(iconFont)(class='button__icon')
+//-     if (iconImage !== '' && iconImage !== undefined)
+//-       +icon-images(iconImage)(class='button__icon')
+//-     | #{text}
+
+mixin buttons-link({ href, text, btnType, btnSize, btnClass, iconFont, iconSize, iconColor, iconClass, iconImage, imageClass })
+  a.btn(
+    class= btnClass ? `${btnClass}` : null
+    class= btnType ? `button--${btnType}` : null
+    class= btnSize ? `button--${btnSize}` : null
     href= href ? href : '#'
-    role='button'
+    role= 'button' 
   )&attributes(attributes)
     if (iconFont !== '' && iconFont !== undefined)
-      +icon-fonts(iconFont)(class='button__icon')
+      +icons({iconFont, iconSize, iconColor, iconClass})
     if (iconImage !== '' && iconImage !== undefined)
-      +icon-images(iconImage)(class='button__icon')
+      +icon-images({iconImage, imageClass})
+    | #{text}
+    
+mixin buttons({ text, btnType, btnSize, btnClass, iconFont, iconSize, iconColor, iconClass, iconImage, imageClass })
+  button.btn(
+    class= btnClass ? `${btnClass}` : null
+    class= btnType ? `button--${btnType}` : null
+    class= btnSize ? `button--${btnSize}` : null
+    role= 'button' 
+  )&attributes(attributes)
+    if (iconFont !== '' && iconFont !== undefined)
+      +icons({iconFont, iconSize, iconColor, iconClass})
+    if (iconImage !== '' && iconImage !== undefined)
+      +icon-images({iconImage, imageClass})
     | #{text}

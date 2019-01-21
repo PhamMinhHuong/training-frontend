@@ -1,0 +1,39 @@
+// ======================================================
+// Components :: Icons
+// ======================================================
+
+.icon {
+  &--xs {
+    font-size: 10px;
+  }
+  &--sm {
+    font-size: 12px;
+  }
+  &--md {
+    font-size: 16px;
+  }
+  &--lg {
+    font-size: 20px;
+  }
+  &--xl {
+    font-size: 30px;
+  }
+  &--yellow {
+    color: $yellow;
+  }
+  &--gray-dark {
+    color: $gray-dark;
+  }
+  &--gray-light {
+    color: $gray-light;
+  }
+  &--gray {
+    color: $gray;
+  }
+  &--black {
+    color: $black;
+  }
+  &--white {
+    color: $white;
+  }
+}

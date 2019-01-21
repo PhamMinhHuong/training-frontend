@@ -10,11 +10,14 @@
 @import 'bootstrap/scss/bootstrap-grid';
 @import 'bootstrap/scss/bootstrap-reboot';
 @import 'bootstrap/scss/bootstrap';
+@import 'slick-carousel/slick/slick.scss';
+@import 'slick-carousel/slick/slick-theme.scss';
 
 // 2. Extensions
 // ------------
 @import 'extensions/fontawesome/fontawesome';
 @import 'extensions/fontawesome/fontface-awesome';
+@import 'extensions/slick';
 
 // 3. Abstracts
 // ------------
@@ -39,6 +42,8 @@
 // 6. Components
 // -------------
 @import 'components/buttons';
+@import 'components/icons';
+@import 'components/title';
 
 // 7. Pages
 // --------

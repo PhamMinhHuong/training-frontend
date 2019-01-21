@@ -1,3 +1,280 @@
 // ======================================================
 // Layout :: Footer
 // ======================================================
+
+.footer {
+  background: $black-light;
+
+  &__top {
+
+    &--outer {
+      border-bottom: 1px solid rgba($gray, .3);
+    }
+
+    &--inner {
+      @extend %wrapper;
+
+      align-items: stretch;
+      flex-flow: row wrap;
+      padding: 30px 0;
+    }
+  }
+
+  &__middle {
+
+    &--outer {
+      border-bottom: 1px solid rgba($gray, .3);
+    }
+
+    &--inner {
+      @extend %wrapper;
+
+      padding: 40px 0;
+      flex-flow: row wrap;
+    }
+  }
+
+  &__bottom {
+
+    &--inner {
+      @extend %wrapper;
+    }
+  }
+
+  &__copyright {
+    padding: 15px 0;
+    font-size: 14px;
+    color: $gray-light;
+    background: $black-lighter;
+  }
+}
+
+.f-social {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__text {
+    color: $gray;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 5px;
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $gray;
+    padding: 0;
+    border-radius: 0;
+    margin-right: 25px;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  @include respond-to(tablet-and-down) {
+    margin-bottom: 30px;
+
+    &__text {
+      color: $green;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.f-email {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+
+  &__text {
+    font-size: 14px;
+    color: $gray;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 155px;
+  }
+
+  &__form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    height: 50px;
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: $green;
+    border-radius: 0;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__image {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include respond-to(phone-and-down) {
+    flex-flow: column nowrap;
+
+    &__form {
+      padding-left: 0;
+    }
+
+    &__text {
+      width: 100%;
+      color: $green;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.f-info {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__image {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $gray-light;
+    margin-bottom: 10px;
+    line-height: 23px;
+    font-size: 12px;
+  }
+
+  &__icon {
+    font-size: 10px;
+    color: $green;
+    margin-right: 5px;
+  }
+
+  &__item {
+    color: $gray-light;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+  }
+
+  @include respond-to(tablet-and-down) {
+    &__image {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.f-customer {
+  display: flex;
+  flex-flow: row wrap;
+
+  &__block {
+    width: 25%;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__btn {
+    color: $gray-light;
+    padding-left: 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+
+    &:hover {
+      color: $gray-light;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  @include respond-to(phone-and-up) {
+    &__block {
+
+      &:first-child {
+        width: 30%;
+      }
+
+      &:last-child {
+        width: 20%;
+      }
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+
+    &__block {
+      width: 100%;
+    }
+  }
+}
+
+.f-question {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &__btn {
+    color: $gray-light;
+    font-size: 12px;
+
+    &:hover {
+      color: $gray-light;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.f-bank {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &__btn {
+    padding-left: 5px;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}

@@ -5,12 +5,25 @@
 // Colors
 // Modifier variables of Boostrap 4
 // Detail: https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults
+
 $white: #fff;
-$black: #000;
+$black: #202020;
+$black-light: #313131;
+$black-lighter: #434343;
+$green: #3fb871;
+$red: #d64146;
+$yellow: #febf01;
+$gray: #898989;
+$gray-dark: #7d7d7d;
+$gray-light: #c2c2c2;
+$del: #959595;
+$border: #e1e1e1;
 
 // Fonts
-$font-family-base: 'Hiragino Sans', 'Noto Sans Japanese', 'Yu Gothic', 'Meiryo', 'Hiragino Kaku Gothic Pro', '游ゴシック', 'メイリオ', 'MS ゴシック', 'sans-serif';
-$font-size-base: 14px;
+$font-family-base: 'Arial', 'sans-serif';
+$font-size-base: 12px;
+// $font-family-base: 'Hiragino Sans', 'Noto Sans Japanese', 'Yu Gothic', 'Meiryo', 'Hiragino Kaku Gothic Pro', '游ゴシック', 'メイリオ', 'MS ゴシック', 'sans-serif';
+// $font-size-base: 14px;
 
 // Paths
 $path-image: '../images';

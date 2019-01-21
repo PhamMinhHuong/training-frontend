@@ -8,6 +8,10 @@
       {
         "title": "Login",
         "url": "login"
+      },
+      {
+        "title": "Home",
+        "url": "home"
       }
     ]
   }

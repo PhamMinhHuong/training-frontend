@@ -60,6 +60,12 @@ $breakpoints: (
   }
 }
 
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
 // Responsive
 // We use Bootstrap's mixin breakpoint
 // https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints
