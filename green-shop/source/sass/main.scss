@@ -17,7 +17,6 @@
 // ------------
 @import 'extensions/fontawesome/fontawesome';
 @import 'extensions/fontawesome/fontface-awesome';
-@import 'extensions/slick';
 
 // 3. Abstracts
 // ------------
@@ -35,9 +34,9 @@
 // 5. Layout
 // ---------
 @import 'layout/header';
-@import 'layout/sidebar';
 @import 'layout/footer';
-@import 'layout/content';
+@import 'layout/product-sidebar';
+@import 'layout/new-sidebar';
 
 // 6. Components
 // -------------
@@ -45,7 +44,9 @@
 @import 'components/icons';
 @import 'components/title';
 @import 'components/product';
-
+@import 'components/breadcrumb';
+@import 'components/list';
+@import 'components/slick';
 // 7. Pages
 // --------
 @import 'pages/home';

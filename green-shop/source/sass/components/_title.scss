@@ -1,25 +1,39 @@
 .title {
-  border-bottom: 1px solid rgba($gray, .3);
+  position: relative;
   margin-bottom: 40px;
+  overflow: hidden;
   width: 100%;
+  text-overflow: ellipsis;
+
+  &:after {
+    @include pseudo;
+
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: rgba($gray, .3);
+  }
 
   &__text {
+    white-space: nowrap;
     display: inline-block;
     color: $green;
     position: relative;
     margin-bottom: 0;
     padding-bottom: 15px;
     font-size: $font-size-lg;
-    font-weight: $semibold;
-
+    font-weight: $bold;
+    font-family: $font-roboto-slab;
     &:before {
       @include pseudo;
 
       width: 100%;
-      height: 2px;
-      top: 100%;
+      height: 1px;
+      bottom: 0;
       left: 0;
       background: $green;
+      z-index: 100;
     }
   }
 }

@@ -1,0 +1,61 @@
+mixin lists(names, hrefs, active)
+  ul.sidebar-list.sidebar-list--default
+    each name, index in names
+      if (index != active - 1)
+        li.sidebar-list__item
+          if (hrefs !== '' && hrefs !== undefined)
+            a.sidebar-list__link(
+              class="sidebar-list__link"
+              class= `${active}` ? `${active}` : null
+              href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
+              i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+              | #{name}
+          else
+
+            a(
+              class="sidebar-list__link"
+              class= `${active}` ? `${active}` : null
+              href='#')
+              i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+              | #{name} 
+      else
+        
+        li.sidebar-list__item.active
+          if (hrefs !== '' && hrefs !== undefined)
+            a.sidebar-list__link(
+              class="sidebar-list__link"
+              class= `${active}` ? `${active}` : null
+              href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
+              i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+              | #{name}
+          else
+
+            a(
+              class="sidebar-list__link"
+              class= `${active}` ? `${active}` : null
+              href='#')
+              i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+              | #{name}
+
+mixin lists-color({name, href, active, color})
+  a(
+    class="color-list__item"
+    class= `${active}` ? `${active}` : null
+    href= href ? href : '#'
+    )
+    .color-list__color(
+      class= `${color}` ? `color-list__color--${color}` : null
+      )
+    p.color-list__text #{name}
+    
+mixin lists-image(names, hrefs)
+  ul.sidebar-list.sidebar-list--image
+    each name, index in names
+      li.sidebar-list__item
+        a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+
+mixin lists-tag(names, hrefs)
+  ul.sidebar-list.sidebar-list--tag
+    each name, index in names
+      li.sidebar-list__item
+        a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}

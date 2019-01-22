@@ -1,0 +1,26 @@
+.breadcrumb {
+  background: transparent;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.breadcrumb-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 150px;
+}
+
+.breadcrumb-item a {
+  color: $gray;
+
+  &:hover {
+    text-decoration: none;
+    color: $green;
+  }
+}
+
+.breadcrumb-item.active {
+  color: $green;
+}

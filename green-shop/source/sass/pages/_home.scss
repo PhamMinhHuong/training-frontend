@@ -129,6 +129,22 @@
       }
     }
   }
+
+  @include respond-to(smallphone-and-down) {
+    &__grid {
+      &--spotlight {
+        grid-template-columns: 1fr;
+      }
+
+      &--discount {
+        grid-template-columns: 1fr;
+      }
+
+      &--hot {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }
 
 .new {

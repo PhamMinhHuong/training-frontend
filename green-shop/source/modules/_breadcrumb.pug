@@ -1,0 +1,11 @@
+mixin breadcrumb(names, hrefs)
+  ol.breadcrumb
+    each name, index in names
+      if (index == names.length - 1)
+        
+        li.breadcrumb-item.active #{name}
+      
+      else
+        
+        li.breadcrumb-item
+          a(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name} 

@@ -7,17 +7,107 @@ block body
   block header
     include layout/_header
   block main
-    .product-list.row.no-gutters
-      ol.breadcrumb.col-12
-        li.breadcrumb-item
-          a(href="#") Home
-        li.breadcrumb-item.active
-          a(href="#") Danh sách sản phẩm
-      .product-list__aside.col-12.col-md-3
-        include layout/_product-aside
-      .product-list__content.col-12.col-md-9
-        .product-list__banner
-          a(href="")
-            img.w-100(src="../images/banner01.png")
+    .product-list
+      .product-list__wrapper.row
+        +breadcrumb(
+        ['Home', 'Danh sách sản phẩm'],
+        ['home', 'product'])
+        .product-list__sidebar-left.col-12.col-md-3
+          include layout/_product-sidebar
+        .product-list__content.col-12.col-md-9
+          .product-list__banner
+            a(href="")
+              img.w-100(src="../images/banner01.png")
+          .product-list__sort.product-sort
+            .product-sort__grid
+              +buttons({
+                btnClass: 'product-sort__btn active',
+                iconFont: 'fas fa-th',
+                iconSize: 'md',
+                iconColor: 'gray',
+                iconClass: 'product-sort__icon'
+              })
+              +buttons({
+                btnClass: 'product-sort__btn',
+                iconFont: 'fas fa-th-list',
+                iconSize: 'md',
+                iconColor: 'gray',
+                iconClass: 'product-sort__icon'
+              })
+            form.product-sort__option.sort-option.form-inline
+              label.sort-option__label#product-name Sắp xếp theo
+              select.sort-option__select#product-name
+                option Tên sản phẩm
+                option Giá sản phẩm
+              label.sort-option__label#product-count Show
+              select.sort-option__select#product-count
+                option 5
+                option 10
+                option 15
+          .product-list__grid
+            +product({
+              image: 'sp15.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '250.000',
+            })
+            +product({
+              image: 'sp12.png',
+              name: 'Cây dứa nhỏ',
+              oldPrice: '850.000',
+              newPrice: '250.000',
+              isNew: true 
+            })
+            +product({
+              image: 'sp11.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '250.000',
+            })
+            +product({
+              image: 'sp02.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '850.000',
+            })
+            +product({
+              image: 'sp08.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '780.000',
+            })
+            +product({
+              image: 'sp06.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '580.000',
+            })
+            +product({
+              image: 'sp08.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '780.000',
+            })
+            +product({
+              image: 'sp06.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '580.000',
+            })
+          nav.product-list__pagination
+            ul.pagination
+              li.page-item
+                a(href="#").page-link Trang trước
+              li.page-item
+                a(href="#").page-link.active 1
+              li.page-item
+                a(href="#").page-link 2
+              li.page-item
+                a(href="#").page-link 3
+              li.page-item
+                a(href="#").page-link 4
+              li.page-item
+                a(href="#").page-link Trang cuối
+    
   block footer
     include layout/_footer
