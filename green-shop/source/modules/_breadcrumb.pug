@@ -3,7 +3,12 @@ mixin breadcrumb(names, hrefs)
     each name, index in names
       if (index == names.length - 1)
         
+<<<<<<< HEAD
         li.breadcrumb-item.active #{name}
+=======
+        li.breadcrumb-item.active
+          a(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name} 
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
       
       else
         

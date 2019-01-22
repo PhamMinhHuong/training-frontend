@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .sidebar-list {
+=======
+.aside-list {
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
   margin-bottom: 40px;
   &--default {
     width: 100%;
@@ -24,7 +28,11 @@
       text-decoration: none;
       color: $green;
 
+<<<<<<< HEAD
       .sidebar-list__icon {
+=======
+      .aside-list__icon {
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
         color: $green;
       }
     }
@@ -35,10 +43,17 @@
   }
 
   &__item.active {
+<<<<<<< HEAD
     .sidebar-list__link {
       color: $green;
     }
     .sidebar-list__icon {
+=======
+    .aside-list__link {
+      color: $green;
+    }
+    .aside-list__icon {
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
       color: $green;
     }
   }

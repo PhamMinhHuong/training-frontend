@@ -12,8 +12,13 @@ block body
         +breadcrumb(
         ['Home', 'Danh sách sản phẩm'],
         ['home', 'product'])
+<<<<<<< HEAD
         .product-list__sidebar-left.col-12.col-md-3
           include layout/_product-sidebar
+=======
+        .product-list__aside.col-12.col-md-3
+          include layout/_product-aside
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
         .product-list__content.col-12.col-md-9
           .product-list__banner
             a(href="")
@@ -36,11 +41,19 @@ block body
               })
             form.product-sort__option.sort-option.form-inline
               label.sort-option__label#product-name Sắp xếp theo
+<<<<<<< HEAD
               select.sort-option__select#product-name
                 option Tên sản phẩm
                 option Giá sản phẩm
               label.sort-option__label#product-count Show
               select.sort-option__select#product-count
+=======
+              select.sort-option__select#product-name.custom-select
+                option Tên sản phẩm
+                option Giá sản phẩm
+              label.sort-option__label#product-count Show
+              select.sort-option__select#product-count.custom-select
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
                 option 5
                 option 10
                 option 15
@@ -94,6 +107,7 @@ block body
               oldPrice: '250.000',
               newPrice: '580.000',
             })
+<<<<<<< HEAD
           nav.product-list__pagination
             ul.pagination
               li.page-item
@@ -108,6 +122,22 @@ block body
                 a(href="#").page-link 4
               li.page-item
                 a(href="#").page-link Trang cuối
+=======
+        nav.product-list__pagination.ml-auto
+          ul.pagination
+            li.page-item
+              a(href="#").page-link Trang trước
+            li.page-item
+              a(href="#").page-link.active 1
+            li.page-item
+              a(href="#").page-link 2
+            li.page-item
+              a(href="#").page-link 3
+            li.page-item
+              a(href="#").page-link 4
+            li.page-item
+              a(href="#").page-link Trang cuối
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
     
   block footer
     include layout/_footer

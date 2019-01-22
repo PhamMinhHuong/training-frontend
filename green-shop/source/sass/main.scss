@@ -35,8 +35,13 @@
 // ---------
 @import 'layout/header';
 @import 'layout/footer';
+<<<<<<< HEAD
 @import 'layout/product-sidebar';
 @import 'layout/new-sidebar';
+=======
+@import 'layout/product-aside';
+@import 'layout/new-aside';
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
 
 // 6. Components
 // -------------
@@ -46,7 +51,11 @@
 @import 'components/product';
 @import 'components/breadcrumb';
 @import 'components/list';
+<<<<<<< HEAD
 @import 'components/slick';
+=======
+
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
 // 7. Pages
 // --------
 @import 'pages/home';

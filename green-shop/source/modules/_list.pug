@@ -1,4 +1,5 @@
 mixin lists(names, hrefs, active)
+<<<<<<< HEAD
   ul.sidebar-list.sidebar-list--default
     each name, index in names
       if (index != active - 1)
@@ -9,10 +10,23 @@ mixin lists(names, hrefs, active)
               class= `${active}` ? `${active}` : null
               href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
               i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+=======
+  ul.aside-list.aside-list--default
+    each name, index in names
+      if (index != active - 1)
+        li.aside-list__item
+          if (hrefs !== '' && hrefs !== undefined)
+            a.aside-list__link(
+              class="aside-list__link"
+              class= `${active}` ? `${active}` : null
+              href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
+              i.aside-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
               | #{name}
           else
 
             a(
+<<<<<<< HEAD
               class="sidebar-list__link"
               class= `${active}` ? `${active}` : null
               href='#')
@@ -27,14 +41,37 @@ mixin lists(names, hrefs, active)
               class= `${active}` ? `${active}` : null
               href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
               i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+=======
+              class="aside-list__link"
+              class= `${active}` ? `${active}` : null
+              href='#')
+              i.aside-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+              | #{name} 
+      else
+        
+        li.aside-list__item.active
+          if (hrefs !== '' && hrefs !== undefined)
+            a.aside-list__link(
+              class="aside-list__link"
+              class= `${active}` ? `${active}` : null
+              href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
+              i.aside-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
               | #{name}
           else
 
             a(
+<<<<<<< HEAD
               class="sidebar-list__link"
               class= `${active}` ? `${active}` : null
               href='#')
               i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+=======
+              class="aside-list__link"
+              class= `${active}` ? `${active}` : null
+              href='#')
+              i.aside-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
               | #{name}
 
 mixin lists-color({name, href, active, color})
@@ -49,6 +86,7 @@ mixin lists-color({name, href, active, color})
     p.color-list__text #{name}
     
 mixin lists-image(names, hrefs)
+<<<<<<< HEAD
   ul.sidebar-list.sidebar-list--image
     each name, index in names
       li.sidebar-list__item
@@ -59,3 +97,15 @@ mixin lists-tag(names, hrefs)
     each name, index in names
       li.sidebar-list__item
         a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+=======
+  ul.aside-list.aside-list--image
+    each name, index in names
+      li.aside-list__item
+        a.aside-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+
+mixin lists-tag(names, hrefs)
+  ul.aside-list.aside-list--tag
+    each name, index in names
+      li.aside-list__item
+        a.aside-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6

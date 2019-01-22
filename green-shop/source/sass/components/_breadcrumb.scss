@@ -5,6 +5,7 @@
   margin-top: 10px;
 }
 
+<<<<<<< HEAD
 .breadcrumb-item {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -12,15 +13,26 @@
   max-width: 150px;
 }
 
+=======
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
 .breadcrumb-item a {
   color: $gray;
 
   &:hover {
     text-decoration: none;
+<<<<<<< HEAD
     color: $green;
+=======
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
   }
 }
 
 .breadcrumb-item.active {
+<<<<<<< HEAD
   color: $green;
+=======
+  a {
+    color: $green;
+  }
+>>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
 }
