@@ -254,6 +254,10 @@
     align-items: center;
     transition: all .3s ease;
 
+    &.active {
+      background: rgba(0, 0, 0, .2);
+    }
+
     &:hover {
       background: rgba(0, 0, 0, .2);
     }

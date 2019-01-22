@@ -10,8 +10,8 @@
     margin-bottom: 0;
     padding-bottom: 15px;
     font-size: $font-size-lg;
-    font-weight: $semibold;
-
+    font-weight: $bold;
+    font-family: $font-roboto-slab;
     &:before {
       @include pseudo;
 

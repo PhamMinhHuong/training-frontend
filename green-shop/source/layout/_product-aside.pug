@@ -1,1 +1,27 @@
-p Product aside
+.product-aside
+  +title('Danh mục sản phẩm')
+  +lists(
+    ['Cây chậu treo ( 10 )',
+    'Cây có hoa ( 5 )',
+    'Cây dây leo',
+    'Cây để bàn',
+    'Cây may mắn',
+    'Cây trang tri',
+    'Cây nội thất'],
+    [''],
+    2)
+  +title('Tìm theo giá')
+  +lists(
+    ['200.000 Đ - 400.000 Đ',
+    '400.000 Đ - 600.000 Đ',
+    '600.000 Đ - 800.000 Đ',
+    '800.000 Đ - 1.000.000 Đ',
+    '1.000.000 Đ - 1.200.000 Đ'])
+  +title('Tìm theo màu')
+  .aside-list.color-list
+    +lists-color({name: 'Xanh cây', color: 'green'})
+    +lists-color({name: 'Đỏ cam', color: 'orangered'})
+    +lists-color({name: 'Tím', color: 'purple'})
+    +lists-color({name: 'Xang trời', color: 'blue'})
+    +lists-color({name: 'Vàng', color: 'yellow'})
+    +lists-color({name: 'Hồng', color: 'pink'})

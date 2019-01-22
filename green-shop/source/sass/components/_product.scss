@@ -166,7 +166,7 @@
   }
 
   @include respond-to(smallphone-and-down) {
-    height: 150px;
+    height: 300px;
   }
 }
 
@@ -183,13 +183,13 @@
 }
 
 .product__item--small {
-  padding: 15px;
+  padding: 18.3px;
   flex-flow: row nowrap;
   min-width: 100px;
 
   .product__image-wrapper {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 0;
   }
 
@@ -219,9 +219,18 @@
     padding-left: 15px;
   }
 
+  @include respond-to(desktop-and-down) {
+    padding: 15px;
+  }
+
   @include respond-to(tablet-and-down) {
     padding: 2px;
     margin-bottom: 2px;
+
+    .product__image-wrapper {
+      width: 70px;
+      height: 70px;
+    }
 
     .product__name {
       font-size: $font-size-base;

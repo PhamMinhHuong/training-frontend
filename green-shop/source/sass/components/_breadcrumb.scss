@@ -1,0 +1,20 @@
+.breadcrumb {
+  background: transparent;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.breadcrumb-item a {
+  color: $gray;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.breadcrumb-item.active {
+  a {
+    color: $green;
+  }
+}

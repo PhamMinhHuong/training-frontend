@@ -1,3 +1,125 @@
 .product-list {
   @extend %wrapper;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__sort {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__pagination {
+    margin-bottom: 50px;
+  }
+
+  @include respond-to(tablet-and-down) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  @include respond-to(smallphone-and-down) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.product-sort {
+  padding: 30px 0;
+  &__btn {
+    padding: 0;
+    margin-right: 10px;
+
+    &.active {
+      .product-sort__icon {
+        color: $green;
+      }
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+  }
+
+  @include respond-to(phone-and-down) {
+    flex-flow: column nowrap;
+
+    &__grid {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.sort-option {
+  margin-left: auto;
+  &__label {
+    margin: 0 10px;
+
+    &#product-count {
+      margin-left: 40px;
+    }
+  }
+
+  &__select {
+    outline: none;
+    border: 1px solid $gray-light;
+    border-radius: 0;
+  }
+
+  @include respond-to(phone-and-down) {
+    width: 100%;
+
+    &__label {
+      margin-bottom: 10px;
+      margin-left: 0;
+    }
+
+    &__select {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.pagination {
+  padding: 0 15px;
+  .page-link {
+    color: $gray;
+    margin: 0 5px;
+
+    &.active {
+      background: $green;
+      color: $white;
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+    .page-link {
+      margin: 0;
+      padding: 5px 10px;
+    }
+  }
+}
+
+.page-item:last-child .page-link {
+  border-radius: 0;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 0;
 }

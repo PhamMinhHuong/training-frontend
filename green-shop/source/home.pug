@@ -14,7 +14,7 @@ block body
     .product
       +title('Sản phẩm nổi bật')
       .product__spotlight.row.no-gutters
-        .col.product__grid--spotlight
+        .col.product__grid.product__grid--spotlight
           +product({
             image: 'sp04.png',
             name: 'Cây chân chim',
@@ -36,7 +36,7 @@ block body
             newPrice: '250.000',
             isNew: true,
           })
-        .col.product__grid--spotlight
+        .col.product__grid.product__grid--spotlight
           +product({
             image: 'sp05.png',
             name: 'Cây Dạ Lam',
@@ -63,7 +63,7 @@ block body
       .product__wrapper.row
         .col-12.col-md-3.product__best
           +title('Sản phẩm mua nhiều')
-          .product__grid--best
+          .product__grid.product__grid--best
             +product({
               image: 'sp15.png',
               name: 'Cây Danh dự',
@@ -108,103 +108,198 @@ block body
             })
         .col-12.col-md-9.product__discount
           +title('Sản phẩm khuyến mãi')
-          .product__grid--discount
+          .product__slider
+            .product__grid.product__grid--discount
+              +product({
+                image: 'sp15.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                sale: '50'
+              })
+              +product({
+                image: 'sp12.png',
+                name: 'Cây dứa nhỏ',
+                oldPrice: '850.000',
+                newPrice: '250.000',
+                sale: '15'
+              })
+              +product({
+                image: 'sp11.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                sale: '50'
+              })
+              +product({
+                image: 'sp02.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '850.000',
+                sale: '33' 
+              })
+              +product({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+                sale: '50'
+              })
+              +product({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+                sale: '45' 
+              })
+            .product__grid--discount
+              +product({
+                image: 'sp15.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                sale: '50'
+              })
+              +product({
+                image: 'sp12.png',
+                name: 'Cây dứa nhỏ',
+                oldPrice: '850.000',
+                newPrice: '250.000',
+                sale: '15'
+              })
+              +product({
+                image: 'sp11.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                sale: '50'
+              })
+              +product({
+                image: 'sp02.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '850.000',
+                sale: '33' 
+              })
+              +product({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+                sale: '50'
+              })
+              +product({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+                sale: '45' 
+              })
+      a.banner(href='#')
+        img.banner__image(src="../images/banner.png", alt="")
+      .product__hot
+        +title('Sản phẩm mới')
+        .product__slider
+          .product__grid.product__grid--hot
             +product({
               image: 'sp15.png',
               name: 'Cây Danh dự',
               oldPrice: '250.000',
               newPrice: '250.000',
-              sale: '50'
             })
             +product({
               image: 'sp12.png',
               name: 'Cây dứa nhỏ',
               oldPrice: '850.000',
               newPrice: '250.000',
-              sale: '15'
+              isNew: true 
             })
             +product({
               image: 'sp11.png',
               name: 'Cây Dạ Lam',
               oldPrice: '250.000',
               newPrice: '250.000',
-              sale: '50'
             })
             +product({
               image: 'sp02.png',
               name: 'Cây Danh dự',
               oldPrice: '250.000',
               newPrice: '850.000',
-              sale: '33' 
             })
             +product({
               image: 'sp08.png',
               name: 'Cây Dạ Lam',
               oldPrice: '250.000',
               newPrice: '780.000',
-              sale: '50'
             })
             +product({
               image: 'sp06.png',
               name: 'Cây Danh dự',
               oldPrice: '250.000',
               newPrice: '580.000',
-              sale: '45' 
             })
-      a.banner(href='#')
-        img.banner__image(src="../images/banner.png", alt="")
-      .product__hot.row.no-gutters
-        +title('Sản phẩm mới')
-        .col.product__grid--hot
-          +product({
-            image: 'sp15.png',
-            name: 'Cây Danh dự',
-            oldPrice: '250.000',
-            newPrice: '250.000',
-          })
-          +product({
-            image: 'sp12.png',
-            name: 'Cây dứa nhỏ',
-            oldPrice: '850.000',
-            newPrice: '250.000',
-            isNew: true 
-          })
-          +product({
-            image: 'sp11.png',
-            name: 'Cây Dạ Lam',
-            oldPrice: '250.000',
-            newPrice: '250.000',
-          })
-          +product({
-            image: 'sp02.png',
-            name: 'Cây Danh dự',
-            oldPrice: '250.000',
-            newPrice: '850.000',
-          })
-          +product({
-            image: 'sp08.png',
-            name: 'Cây Dạ Lam',
-            oldPrice: '250.000',
-            newPrice: '780.000',
-          })
-          +product({
-            image: 'sp06.png',
-            name: 'Cây Danh dự',
-            oldPrice: '250.000',
-            newPrice: '580.000',
-          })
-          +product({
-            image: 'sp08.png',
-            name: 'Cây Dạ Lam',
-            oldPrice: '250.000',
-            newPrice: '780.000',
-          })
-          +product({
-            image: 'sp06.png',
-            name: 'Cây Danh dự',
-            oldPrice: '250.000',
-            newPrice: '580.000',
-          })
+            +product({
+              image: 'sp08.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '780.000',
+            })
+            +product({
+              image: 'sp06.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '580.000',
+            })
+          .product__grid.product__grid--hot
+            +product({
+              image: 'sp15.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '250.000',
+            })
+            +product({
+              image: 'sp12.png',
+              name: 'Cây dứa nhỏ',
+              oldPrice: '850.000',
+              newPrice: '250.000',
+              isNew: true 
+            })
+            +product({
+              image: 'sp11.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '250.000',
+            })
+            +product({
+              image: 'sp02.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '850.000',
+            })
+            +product({
+              image: 'sp08.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '780.000',
+            })
+            +product({
+              image: 'sp06.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '580.000',
+            })
+            +product({
+              image: 'sp08.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '780.000',
+            })
+            +product({
+              image: 'sp06.png',
+              name: 'Cây Danh dự',
+              oldPrice: '250.000',
+              newPrice: '580.000',
+            })
     .new
       +title('Tin tức')
       .new__grid
