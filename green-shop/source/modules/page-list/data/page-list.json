@@ -6,12 +6,40 @@
         "url": "styleguide"
       },
       {
+        "title": "Home",
+        "url": "home"
+      },
+      {
+        "title": "Product List",
+        "url": "product"
+      },
+      {
+        "title": "Product Detail",
+        "url": "detail"
+      },
+      {
+        "title": "Cart",
+        "url": "cart"
+      },
+      {
+        "title": "News",
+        "url": "new"
+      },
+      {
+        "title": "New Detail",
+        "url": "new-detail"
+      },
+      {
         "title": "Login",
         "url": "login"
       },
       {
-        "title": "Home",
-        "url": "home"
+        "title": "Logout",
+        "url": "logout"
+      },
+      {
+        "title": "Contact",
+        "url": "contact"
       }
     ]
   }

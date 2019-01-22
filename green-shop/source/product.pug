@@ -1,0 +1,23 @@
+extends layout/_default
+
+block head
+  +head('Green Shop | Danh sách sản phẩm')
+
+block body
+  block header
+    include layout/_header
+  block main
+    .product-list.row.no-gutters
+      ol.breadcrumb.col-12
+        li.breadcrumb-item
+          a(href="#") Home
+        li.breadcrumb-item.active
+          a(href="#") Danh sách sản phẩm
+      .product-list__aside.col-12.col-md-3
+        include layout/_product-aside
+      .product-list__content.col-12.col-md-9
+        .product-list__banner
+          a(href="")
+            img.w-100(src="../images/banner01.png")
+  block footer
+    include layout/_footer

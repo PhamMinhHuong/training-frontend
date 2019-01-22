@@ -2,50 +2,44 @@
 // Layout :: Footer
 // ======================================================
 
+
 .footer {
   background: $black-light;
-
-  &__top {
-
-    &--outer {
-      border-bottom: 1px solid rgba($gray, .3);
-    }
-
-    &--inner {
-      @extend %wrapper;
-
-      align-items: stretch;
-      flex-flow: row wrap;
-      padding: 30px 0;
-    }
-  }
-
-  &__middle {
-
-    &--outer {
-      border-bottom: 1px solid rgba($gray, .3);
-    }
-
-    &--inner {
-      @extend %wrapper;
-
-      padding: 40px 0;
-      flex-flow: row wrap;
-    }
-  }
-
-  &__bottom {
-
-    &--inner {
-      @extend %wrapper;
-    }
-  }
 
   &__copyright {
     padding: 15px 0;
     font-size: $font-size-sm;
     color: $gray-light;
     background: $black-lighter;
+  }
+}
+
+.footer-top {
+  border-bottom: 1px solid rgba($gray, .3);
+
+  &__content {
+    @extend %wrapper;
+
+    align-items: stretch;
+    flex-flow: row wrap;
+    padding: 30px 0;
+  }
+}
+
+.footer-middle {
+  border-bottom: 1px solid rgba($gray, .3);
+
+  &__content {
+    @extend %wrapper;
+
+    padding: 40px 0;
+    flex-flow: row wrap;
+  }
+}
+
+.footer-bottom {
+  &__content {
+    @extend %wrapper;
   }
 }
 
@@ -78,9 +72,12 @@
     padding: 0;
     border-radius: 0;
     margin-right: 25px;
-    &:focus {
-      outline: none;
-      box-shadow: none;
+  }
+
+  &__icon {
+    transition: all .3s ease;
+    &:hover {
+      color: $green;
     }
   }
 
@@ -104,6 +101,7 @@
     color: $gray;
     text-transform: uppercase;
     font-weight: $semibold;
+    word-break: break-word;
     width: 155px;
   }
 
@@ -131,10 +129,6 @@
     height: 50px;
     background: $green;
     border-radius: 0;
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
   }
 
   &__image {
@@ -208,6 +202,13 @@
     margin-right: 5px;
   }
 
+  &__title {
+    color: $green;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    font-weight: $bold;
+  }
+
   &__btn {
     color: $gray-light;
     padding-left: 0;
@@ -216,12 +217,7 @@
     text-align: left;
 
     &:hover {
-      color: $gray-light;
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
+      color: $green;
     }
   }
 
@@ -256,12 +252,7 @@
     font-size: $font-size-base;
 
     &:hover {
-      color: $gray-light;
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
+      color: $green;
     }
   }
 }
@@ -272,10 +263,5 @@
 
   &__btn {
     padding-left: 5px;
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
   }
 }

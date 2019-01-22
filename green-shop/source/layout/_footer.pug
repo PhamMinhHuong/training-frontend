@@ -1,7 +1,7 @@
 footer.footer
-  .footer__top--outer
-    .footer__top--inner.row
-      .footer__social.f-social.col-12.col-md-4
+  .footer-top
+    .footer-top__content.row
+      .footer-top__social.f-social.col-12.col-md-4
         p.f-social__text Kênh thông tin từ chúng tôi :
         ul.f-social__list
           li.f-social__item
@@ -36,7 +36,7 @@ footer.footer
               iconFont: 'fab fa-vimeo-v',
               iconSize: 'md',
               iconColor: 'gray'})
-      .footer__email.f-email.col-12.col-md-8
+      .footer-top__email.f-email.col-12.col-md-8
         p.f-email__text Đăng ký nhận email từ chúng tôi
         form.f-email__form.ml-auto
           input.f-email__input
@@ -44,10 +44,11 @@ footer.footer
             btnClass: 'f-email__btn',
             iconImage: 'sent-mail.png',
             imageClass: 'f-email__image'})
-  .footer__middle--outer
-    .footer__middle--inner.row
-      .footer__info.f-info.col-12.col-lg-4
-        img.f-info__image(src="../images/logo.png", alt="")
+  .footer-middle
+    .footer-middle__content.row
+      .footer-middle__info.f-info.col-12.col-lg-4
+        a(href="#")
+          img.f-info__image(src="../images/logo.png", alt="")
         p.f-info__text Green shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển 
         ul.f-info__contact
           li.f-info__item
@@ -64,9 +65,9 @@ footer.footer
               iconSize: 'sm',
               iconColor: 'green'})
             p Email : info@dkt.com.vn
-      .footer__customer.f-customer.col-12.col-lg-8
+      .footer-middle__customer.f-customer.col-12.col-lg-8
         ul.f-customer__block
-          p.footer__title Thông tin khách hàng
+          p.f-customer__title Thông tin khách hàng
           li
             +buttons-link({
               href: '#',
@@ -118,7 +119,7 @@ footer.footer
               iconColor: 'gray-light',
             })
         ul.f-customer__block
-          p.footer__title Hỗ trợ dịch vụ
+          p.f-customer__title Hỗ trợ dịch vụ
           li
             +buttons-link({
               href: '#',
@@ -170,7 +171,7 @@ footer.footer
               iconColor: 'gray-light',
             })
         ul.f-customer__block
-          p.footer__title Chính sách ưu đãi
+          p.f-customer__title Chính sách ưu đãi
           li
             +buttons-link({
               href: '#',
@@ -222,7 +223,7 @@ footer.footer
               iconColor: 'gray-light',
             })
         ul.f-customer__block
-          p.footer__title Tin tức
+          p.f-customer__title Tin tức
           li
             +buttons-link({
               href: '#',
@@ -273,9 +274,9 @@ footer.footer
               iconSize: 'xs',
               iconColor: 'gray-light',
             })
-  .footer__bottom--outer.d-none.d-md-block
-    .footer__bottom--inner
-      ul.footer__question.f-question
+  .footer-bottom.d-none.d-md-block
+    .footer-bottom__content
+      ul.footer-bottom__question.f-question
         li.f-question__item
           +buttons-link({
             href: '#',
@@ -306,7 +307,7 @@ footer.footer
             text: 'Câu hỏi thường gặp',
             btnClass: 'f-question__btn',
           })
-      ul.footer__bank.f-bank.ml-auto
+      ul.footer-bottom__bank.f-bank.ml-auto
         li.f-bank__item
           +buttons-link({
             href: '#',
