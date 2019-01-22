@@ -16,10 +16,7 @@
 
   &__pagination {
     margin-bottom: 50px;
-<<<<<<< HEAD
     display: flex;
-=======
->>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
   }
 
   @include respond-to(tablet-and-down) {
@@ -82,15 +79,10 @@
 
   &__select {
     outline: none;
-<<<<<<< HEAD
     padding: 10px 15px;
     border: 1px solid rgba($gray-light, .6);
     border-radius: 0;
     color: $gray;
-=======
-    border: 1px solid $gray-light;
-    border-radius: 0;
->>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
   }
 
   @include respond-to(phone-and-down) {
@@ -108,11 +100,7 @@
 }
 
 .pagination {
-<<<<<<< HEAD
   margin-left: auto;
-=======
-  padding: 0 15px;
->>>>>>> 90e1bd4112bb9a11359ddb61506c4ae59d1e3fb6
   .page-link {
     color: $gray;
     margin: 0 5px;
