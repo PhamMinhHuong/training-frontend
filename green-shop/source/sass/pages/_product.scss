@@ -1,3 +1,7 @@
+// ======================================================
+// Pages :: Product
+// ======================================================
+
 .product-list {
   @extend %wrapper;
 
@@ -6,6 +10,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     margin-bottom: 50px;
+
+    .product__overlay {
+      transition: none;
+    }
   }
 
   &__sort {
@@ -125,4 +133,133 @@
 
 .page-item:first-child .page-link {
   border-radius: 0;
+}
+
+.product-list__list {
+  grid-template-columns: 1fr;
+
+  .product__item {
+    flex-flow: row nowrap;
+    position: relative;
+    align-items: stretch;
+  }
+
+  .product__image-wrapper {
+    width: 220px;
+    height: auto;
+    position: static;
+    margin-bottom: 0;
+  }
+
+  .product__del {
+    display: none;
+  }
+
+  .product__info {
+    text-align: left;
+    padding: 15px 40px 55px 40px;
+    flex: 1;
+  }
+
+  .product__name {
+    font-weight: $semibold;
+  }
+
+  .product__star {
+    font-size: 10px;
+  }
+
+  .product__overlay {
+    position: absolute;
+    opacity: 1;
+    background: transparent;
+    height: 40px;
+    width: inherit;
+    bottom: 15px;
+    margin-left: 260px;
+    transition: color .3s ease;
+  }
+
+  .product__search {
+    border: 1px solid rgba($black, .3);
+
+    &:hover {
+      background: rgba($black, .1);
+    }
+  }
+
+  .product__description {
+    display: block;
+    color: $gray;
+    margin-bottom: 20px;
+  }
+
+  .product__like {
+    display: flex;
+    border: 1px solid rgba($black, .3);
+
+    &:hover {
+      background: rgba($black, .1);
+    }
+  }
+
+  @include respond-to(smallphone-and-down) {
+    grid-template-columns: 1fr;
+
+    .product__item {
+      flex-flow: column nowrap;
+    }
+
+    .product__image-wrapper {
+      width: 100%;
+      height: 320px;
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    .product__overlay {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      bottom: 0;
+      transition: all .3s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .product__del {
+      display: none;
+    }
+
+    .product__info {
+      text-align: left;
+      padding: 15px;
+      flex: 1;
+    }
+
+    .product__search {
+      border: 1px solid rgba($black, .3);
+
+      &:hover {
+        background: rgba($black, .1);
+      }
+    }
+
+    .product__description {
+      display: block;
+      color: $gray;
+      margin-bottom: 20px;
+    }
+
+    .product__like {
+      display: flex;
+      border: 1px solid rgba($black, .3);
+
+      &:hover {
+        background: rgba($black, .1);
+      }
+    }
+  }
 }

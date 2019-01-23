@@ -1,0 +1,58 @@
+extends layout/_default
+
+block head
+  +head('Green Shop | Giỏ hàng')
+
+block body
+  block header
+    include layout/_header
+  block main
+    .main.product-new
+      .product-new__wrapper.row
+        +breadcrumb(
+        ['Home', 'Cây dạ lam'],
+        ['home', 'new'])
+        .product-new__sidebar-left.col-12.col-md-3
+          include layout/_new-sidebar
+        .product-new__content.col-12.col-md-9
+          .product-new__post
+            +posts({
+              name: 'Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên',
+              date: '20/12/2015',
+              time: '11:20:00',
+              comment: '0',
+              image: 'new04',
+              description: 'Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!'
+            })
+            +posts({
+              name: 'Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách',
+              date: '20/12/2015',
+              time: '11:20:00',
+              comment: '0',
+              image: 'new01',
+              description: 'Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!'
+            })
+            +posts({
+              name: '7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng',
+              date: '20/12/2015',
+              time: '11:20:00',
+              comment: '0',
+              image: 'new05',
+              description: 'Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!'
+            })
+          nav.product-new__pagination
+            ul.pagination
+              li.page-item
+                a(href="#").page-link Trang trước
+              li.page-item
+                a(href="#").page-link.active 1
+              li.page-item
+                a(href="#").page-link 2
+              li.page-item
+                a(href="#").page-link 3
+              li.page-item
+                a(href="#").page-link 4
+              li.page-item
+                a(href="#").page-link Trang cuối
+  block footer
+    include layout/_footer

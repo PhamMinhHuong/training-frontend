@@ -47,10 +47,19 @@
 @import 'components/breadcrumb';
 @import 'components/list';
 @import 'components/slick';
+@import 'components/new';
+
 // 7. Pages
 // --------
 @import 'pages/home';
 @import 'pages/product';
+@import 'pages/product-detail';
+@import 'pages/cart';
+@import 'pages/new';
+@import 'pages/new-detail';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/contact';
 
 // 8. Themes
 // ---------

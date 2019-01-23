@@ -96,3 +96,46 @@
     color: $green;
   }
 }
+
+.sidebar-list--image {
+  .sidebar-list__item {
+    border-bottom: none;
+
+    .sidebar-list__link {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
+
+  .sidebar-list__image-wrapper {
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .sidebar-list__text {
+    flex: 1;
+  }
+}
+
+.sidebar-list--tag {
+  display: flex;
+  flex-flow: row wrap;
+
+  .sidebar-list__item {
+    max-width: 100%;
+    border-bottom: none;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba($gray, .3);
+
+    .sidebar-list__link {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: block;
+      padding: 10px 20px;
+    }
+  }
+}

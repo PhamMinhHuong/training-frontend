@@ -1,0 +1,58 @@
+// ======================================================
+// Component :: New
+// ======================================================
+
+.post-item {
+  margin-bottom: 50px;
+
+  &__name {
+    color: $black;
+    font-size: $font-size-xl;
+    margin-bottom: 10px;
+    display: block;
+
+    &:hover {
+      color: $green;
+      text-decoration: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row nowrap;
+    color: $gray-light;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    color: $green;
+    font-size: $icon-size-sm;
+    margin-right: 10px;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    height: 380px;
+  }
+
+  &__description {
+    color: $gray;
+  }
+
+  &__date {
+    margin-right: 15px;
+    font-size: $font-size-sm;
+  }
+
+  &__time {
+    margin-right: 15px;
+    font-size: $font-size-sm;
+  }
+
+  &__comment {
+    margin-right: 15px;
+    font-size: $font-size-sm;
+  }
+}

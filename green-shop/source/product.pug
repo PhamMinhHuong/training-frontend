@@ -7,7 +7,7 @@ block body
   block header
     include layout/_header
   block main
-    .product-list
+    .main.product-list
       .product-list__wrapper.row
         +breadcrumb(
         ['Home', 'Danh sách sản phẩm'],
@@ -21,14 +21,14 @@ block body
           .product-list__sort.product-sort
             .product-sort__grid
               +buttons({
-                btnClass: 'product-sort__btn active',
+                btnClass: 'product-sort__btn product-sort__grid-btn active',
                 iconFont: 'fas fa-th',
                 iconSize: 'md',
                 iconColor: 'gray',
                 iconClass: 'product-sort__icon'
               })
               +buttons({
-                btnClass: 'product-sort__btn',
+                btnClass: 'product-sort__btn product-sort__list-btn',
                 iconFont: 'fas fa-th-list',
                 iconSize: 'md',
                 iconColor: 'gray',
@@ -44,55 +44,63 @@ block body
                 option 5
                 option 10
                 option 15
-          .product-list__grid
+          .product-list__grid.product__slider
             +product({
               image: 'sp15.png',
               name: 'Cây Danh dự',
               oldPrice: '250.000',
               newPrice: '250.000',
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
             +product({
               image: 'sp12.png',
               name: 'Cây dứa nhỏ',
               oldPrice: '850.000',
               newPrice: '250.000',
-              isNew: true 
+              isNew: true,
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
             +product({
               image: 'sp11.png',
               name: 'Cây Dạ Lam',
               oldPrice: '250.000',
               newPrice: '250.000',
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
             +product({
               image: 'sp02.png',
               name: 'Cây Danh dự',
               oldPrice: '250.000',
               newPrice: '850.000',
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
             +product({
               image: 'sp08.png',
               name: 'Cây Dạ Lam',
               oldPrice: '250.000',
               newPrice: '780.000',
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
             +product({
               image: 'sp06.png',
               name: 'Cây Danh dự',
               oldPrice: '250.000',
               newPrice: '580.000',
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
             +product({
               image: 'sp08.png',
               name: 'Cây Dạ Lam',
               oldPrice: '250.000',
               newPrice: '780.000',
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
             +product({
               image: 'sp06.png',
               name: 'Cây Danh dự',
               oldPrice: '250.000',
               newPrice: '580.000',
+              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
             })
           nav.product-list__pagination
             ul.pagination

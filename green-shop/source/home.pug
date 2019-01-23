@@ -7,320 +7,320 @@ block body
   block header
     include layout/_header
   block main 
-    .slider
-      - for( i = 0; i < 3; i++)
-        .slider__image
-          img(src="../images/slide.png", alt="")
-    .product
-      +title('Sản phẩm nổi bật')
-      .product__spotlight.row.no-gutters
-        .col.product__grid.product__grid--spotlight
-          +product({
-            image: 'sp04.png',
-            name: 'Cây chân chim',
-            oldPrice: '250.000',
-            newPrice: '250.000',
-            isNew: true,
-            size: 'big',
-          })
-          +product({
-            image: 'sp11.png',
-            name: 'Cây cọ ta',
-            oldPrice: '150.000',
-            newPrice: '250.000',
-          })
-          +product({
-            image: 'sp06.png',
-            name: 'Cây dứa nhỏ',
-            oldPrice: '370.000',
-            newPrice: '250.000',
-            isNew: true,
-          })
-        .col.product__grid.product__grid--spotlight
-          +product({
-            image: 'sp05.png',
-            name: 'Cây Dạ Lam',
-            oldPrice: '250.000',
-            newPrice: '250.000',
-            sale: '50'
-          })
-          +product({
-            image: 'sp15.png',
-            name: 'Cây Danh dự',
-            oldPrice: '850.000',
-            newPrice: '250.000',
-            isNew: true 
-          })
-          +product({
-            image: 'sp03.png',
-            name: 'Cây đa búp đỏ',
-            oldPrice: '1000.000',
-            newPrice: '250.000',
-            sale: '50',
-            size: 'big',
-            custom: 'd-none d-md-flex'
-          })
-      .product__wrapper.row
-        .col-12.col-md-3.product__best
-          +title('Sản phẩm mua nhiều')
-          .product__grid.product__grid--best
+    .main
+      .slider
+        - for( i = 0; i < 3; i++)
+          .slider__image
+            img(src="../images/slide.png", alt="")
+      .product
+        +title('Sản phẩm nổi bật')
+        .product__spotlight.row.no-gutters
+          .col.product__grid.product__grid--spotlight
             +product({
-              image: 'sp15.png',
-              name: 'Cây Danh dự',
+              image: 'sp04.png',
+              name: 'Cây chân chim',
               oldPrice: '250.000',
               newPrice: '250.000',
-              size: 'small'
-            })
-            +product({
-              image: 'sp12.png',
-              name: 'Cây dứa nhỏ',
-              oldPrice: '850.000',
-              newPrice: '250.000',
-              size: 'small'
+              isNew: true,
+              size: 'big',
             })
             +product({
               image: 'sp11.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
+              name: 'Cây cọ ta',
+              oldPrice: '150.000',
               newPrice: '250.000',
-              size: 'small'
-            })
-            +product({
-              image: 'sp02.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '850.000',
-              size: 'small' 
-            })
-            +product({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-              size: 'small'
             })
             +product({
               image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-              size: 'small'
+              name: 'Cây dứa nhỏ',
+              oldPrice: '370.000',
+              newPrice: '250.000',
+              isNew: true,
             })
-        .col-12.col-md-9.product__discount
-          +title('Sản phẩm khuyến mãi')
+          .col.product__grid.product__grid--spotlight
+            +product({
+              image: 'sp05.png',
+              name: 'Cây Dạ Lam',
+              oldPrice: '250.000',
+              newPrice: '250.000',
+              sale: '50'
+            })
+            +product({
+              image: 'sp15.png',
+              name: 'Cây Danh dự',
+              oldPrice: '850.000',
+              newPrice: '250.000',
+              isNew: true 
+            })
+            +product({
+              image: 'sp03.png',
+              name: 'Cây đa búp đỏ',
+              oldPrice: '1000.000',
+              newPrice: '250.000',
+              sale: '50',
+              size: 'big',
+              custom: 'd-none d-md-flex'
+            })
+        .product__wrapper.row
+          .col-12.col-md-3.product__best
+            +title('Sản phẩm mua nhiều')
+            .product__grid.product__grid--best
+              +product({
+                image: 'sp15.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                size: 'small'
+              })
+              +product({
+                image: 'sp12.png',
+                name: 'Cây dứa nhỏ',
+                oldPrice: '850.000',
+                newPrice: '250.000',
+                size: 'small'
+              })
+              +product({
+                image: 'sp11.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                size: 'small'
+              })
+              +product({
+                image: 'sp02.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '850.000',
+                size: 'small' 
+              })
+              +product({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+                size: 'small'
+              })
+              +product({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+                size: 'small'
+              })
+          .col-12.col-md-9.product__discount
+            +title('Sản phẩm khuyến mãi')
+            .product__slider
+              .product__grid.product__grid--discount
+                +product({
+                  image: 'sp15.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  sale: '50'
+                })
+                +product({
+                  image: 'sp12.png',
+                  name: 'Cây dứa nhỏ',
+                  oldPrice: '850.000',
+                  newPrice: '250.000',
+                  sale: '15'
+                })
+                +product({
+                  image: 'sp11.png',
+                  name: 'Cây Dạ Lam',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  sale: '50'
+                })
+                +product({
+                  image: 'sp02.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '850.000',
+                  sale: '33' 
+                })
+                +product({
+                  image: 'sp08.png',
+                  name: 'Cây Dạ Lam',
+                  oldPrice: '250.000',
+                  newPrice: '780.000',
+                  sale: '50'
+                })
+                +product({
+                  image: 'sp06.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '580.000',
+                  sale: '45' 
+                })
+              .product__grid.product__grid--discount
+                +product({
+                  image: 'sp15.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  sale: '50'
+                })
+                +product({
+                  image: 'sp12.png',
+                  name: 'Cây dứa nhỏ',
+                  oldPrice: '850.000',
+                  newPrice: '250.000',
+                  sale: '15'
+                })
+                +product({
+                  image: 'sp11.png',
+                  name: 'Cây Dạ Lam',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  sale: '50'
+                })
+                +product({
+                  image: 'sp02.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '850.000',
+                  sale: '33' 
+                })
+                +product({
+                  image: 'sp08.png',
+                  name: 'Cây Dạ Lam',
+                  oldPrice: '250.000',
+                  newPrice: '780.000',
+                  sale: '50'
+                })
+                +product({
+                  image: 'sp06.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '580.000',
+                  sale: '45' 
+                })
+        a.banner(href='#')
+          img.banner__image(src="../images/banner.png", alt="")
+        .product__hot
+          +title('Sản phẩm mới')
           .product__slider
-            .product__grid.product__grid--discount
+            .product__grid.product__grid--hot
               +product({
                 image: 'sp15.png',
                 name: 'Cây Danh dự',
                 oldPrice: '250.000',
                 newPrice: '250.000',
-                sale: '50'
               })
               +product({
                 image: 'sp12.png',
                 name: 'Cây dứa nhỏ',
                 oldPrice: '850.000',
                 newPrice: '250.000',
-                sale: '15'
+                isNew: true 
               })
               +product({
                 image: 'sp11.png',
                 name: 'Cây Dạ Lam',
                 oldPrice: '250.000',
                 newPrice: '250.000',
-                sale: '50'
               })
               +product({
                 image: 'sp02.png',
                 name: 'Cây Danh dự',
                 oldPrice: '250.000',
                 newPrice: '850.000',
-                sale: '33' 
               })
               +product({
                 image: 'sp08.png',
                 name: 'Cây Dạ Lam',
                 oldPrice: '250.000',
                 newPrice: '780.000',
-                sale: '50'
               })
               +product({
                 image: 'sp06.png',
                 name: 'Cây Danh dự',
                 oldPrice: '250.000',
                 newPrice: '580.000',
-                sale: '45' 
               })
-            .product__grid.product__grid--discount
+              +product({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+              })
+              +product({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+              })
+            .product__grid.product__grid--hot
               +product({
                 image: 'sp15.png',
                 name: 'Cây Danh dự',
                 oldPrice: '250.000',
                 newPrice: '250.000',
-                sale: '50'
               })
               +product({
                 image: 'sp12.png',
                 name: 'Cây dứa nhỏ',
                 oldPrice: '850.000',
                 newPrice: '250.000',
-                sale: '15'
+                isNew: true 
               })
               +product({
                 image: 'sp11.png',
                 name: 'Cây Dạ Lam',
                 oldPrice: '250.000',
                 newPrice: '250.000',
-                sale: '50'
               })
               +product({
                 image: 'sp02.png',
                 name: 'Cây Danh dự',
                 oldPrice: '250.000',
                 newPrice: '850.000',
-                sale: '33' 
               })
               +product({
                 image: 'sp08.png',
                 name: 'Cây Dạ Lam',
                 oldPrice: '250.000',
                 newPrice: '780.000',
-                sale: '50'
               })
               +product({
                 image: 'sp06.png',
                 name: 'Cây Danh dự',
                 oldPrice: '250.000',
                 newPrice: '580.000',
-                sale: '45' 
               })
-      a.banner(href='#')
-        img.banner__image(src="../images/banner.png", alt="")
-      .product__hot
-        +title('Sản phẩm mới')
-        .product__slider
-          .product__grid.product__grid--hot
-            +product({
-              image: 'sp15.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '250.000',
-            })
-            +product({
-              image: 'sp12.png',
-              name: 'Cây dứa nhỏ',
-              oldPrice: '850.000',
-              newPrice: '250.000',
-              isNew: true 
-            })
-            +product({
-              image: 'sp11.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '250.000',
-            })
-            +product({
-              image: 'sp02.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '850.000',
-            })
-            +product({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-            })
-            +product({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-            })
-            +product({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-            })
-            +product({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-            })
-          .product__grid.product__grid--hot
-            +product({
-              image: 'sp15.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '250.000',
-            })
-            +product({
-              image: 'sp12.png',
-              name: 'Cây dứa nhỏ',
-              oldPrice: '850.000',
-              newPrice: '250.000',
-              isNew: true 
-            })
-            +product({
-              image: 'sp11.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '250.000',
-            })
-            +product({
-              image: 'sp02.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '850.000',
-            })
-            +product({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-            })
-            +product({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-            })
-            +product({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-            })
-            +product({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-            })
-    .new
-      +title('Tin tức')
-      .new__grid
-        +news({
-          image: 'new01.png',
-          day: 'Thứ 7 ,ngày 31, tháng 12, năm 2015',
-          title: '15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê',
-          des: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé ! Kết hợp hàng rào'
-        })
-        +news({
-          image: 'new02.png',
-          day: 'Thứ 7 ,ngày 31, tháng 12, năm 2015',
-          title: '15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê',
-          des: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé ! Kết hợp hàng rào'
-        })
-        +news({
-          image: 'new03.png',
-          day: 'Thứ 7 ,ngày 31, tháng 12, năm 2015',
-          title: '15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê',
-          des: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé ! Kết hợp hàng rào'
-        })
-
+              +product({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+              })
+              +product({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+              })
+      .new
+        +title('Tin tức')
+        .new__grid
+          +news({
+            image: 'new01.png',
+            day: 'Thứ 7 ,ngày 31, tháng 12, năm 2015',
+            title: '15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê',
+            des: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé ! Kết hợp hàng rào'
+          })
+          +news({
+            image: 'new02.png',
+            day: 'Thứ 7 ,ngày 31, tháng 12, năm 2015',
+            title: '15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê',
+            des: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé ! Kết hợp hàng rào'
+          })
+          +news({
+            image: 'new03.png',
+            day: 'Thứ 7 ,ngày 31, tháng 12, năm 2015',
+            title: '15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê',
+            des: 'Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé ! Kết hợp hàng rào'
+          })
   block footer
     include layout/_footer

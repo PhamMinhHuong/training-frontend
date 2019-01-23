@@ -1,0 +1,70 @@
+extends layout/_default
+
+block head
+  +head('Green Shop | Giỏ hàng')
+
+block body
+  block header
+    include layout/_header
+  block main
+    .main.product-cart
+      .product-cart__wrapper.row
+        +breadcrumb(
+        ['Home', 'Giỏ hàng'],
+        ['home', 'cart'])
+      h3.title--normal Giỏ hàng
+      table.product-cart__table.cart-table
+        thead.cart-table__head
+          tr
+            td Hình ảnh
+            td Tên sản phẩm
+            td Đơn giá
+            td Số lượng
+            td Thành tiền
+            td Xóa
+        tbody.cart-table__body.cart-body
+          - for(i = 0; i < 3; i++)
+            tr
+              td
+                .cart-body__img-wrapper
+                  img.img-fluid(src="../images/sp01.png", alt="")
+              td.cart-body__name Cây văn phòng
+              td.cart-body__price 270.000 đ
+              td
+                p.cart-body__count 1
+              td.cart-body__total-price 270.000 đ
+              td
+                +buttons({
+                  iconFont: 'fas fa-trash-alt',
+                  iconSize: 'lg',
+                  iconColor: 'gray'
+                })
+      .product-cart__actions.cart-actions
+        +buttons-link({
+          text: "hủy đơn hàng",
+          btnClass: 'cart-actions__cancel btn-white'
+        })
+        +buttons-link({
+          text: "tiếp tục mua",
+          btnClass: 'cart-actions__continue btn-green'
+        })
+      .product-cart__vat
+        table.table-vat
+          thead
+            tr
+              td Tổng tiền ( chưa thuế )
+              td 270.000 đ
+          tbody
+            tr
+              td Thuế ( VAT 10% )
+              td 27.000 đ
+            tr.table-vat__total
+              td Tổng phải thanh toán
+              td 297.000 đ
+      .product-cart__checkout
+        +buttons({
+          text: "thanh toán",
+          btnClass: 'btn-green'
+        })
+  block footer
+    include layout/_footer

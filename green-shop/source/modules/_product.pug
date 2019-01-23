@@ -1,4 +1,4 @@
-mixin product({image, name, href, oldPrice, newPrice, sale, isNew, size, custom})
+mixin product({image, name, href, oldPrice, newPrice, description, sale, isNew, size, custom})
   .product__item(
       class= size ? `product__item--${size}` : null
       class= custom ? `${custom}` : null
@@ -19,17 +19,26 @@ mixin product({image, name, href, oldPrice, newPrice, sale, isNew, size, custom}
             iconSize: 'md',
             iconColor: 'black'
           })
+          +buttons({
+            btnClass: 'product__like',
+            iconClass: 'product__icon',
+            iconFont: 'fas fa-heart',
+            iconSize: 'md',
+            iconColor: 'black'
+          })
       if (sale !== '' && sale !== undefined)
         p.product__sale -#{sale}%
       if (isNew == true) 
         p.product__new New
-    .product__info.text-center
+    .product__info
       a.product__name(href= href ? href : '#') #{name}
       .product__star
         i.fas.fa-star
         i.fas.fa-star
         i.fas.fa-star
         i.fas.fa-star
-        i.fas.fa-star-half
+        i.fas.fa-star-half-alt
+      if (description !== '' && description !== undefined)
+        p.product__description #{description}
       p.product__price #{newPrice} đ
         span.product__del #{oldPrice} đ
