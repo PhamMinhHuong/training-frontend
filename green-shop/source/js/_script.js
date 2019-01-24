@@ -18,7 +18,7 @@ $(function(){
 
   // Slider Home
 
-  $('.slider').slick({
+  $('.feature-slider').slick({
     dots: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -28,9 +28,11 @@ $(function(){
 
   // Slider Sale Product
 
-  $('.product__slider').slick({
-    infinite: true
+  $('.feature-product__slider').slick({
+    dots: false,
+    infinite: false
   })
+
   // Slider Product Detail
 
   $('.overview-slider__main').slick({

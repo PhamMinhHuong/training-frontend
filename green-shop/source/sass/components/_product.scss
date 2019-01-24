@@ -13,7 +13,6 @@
   &__image-wrapper {
     width: 100%;
     position: relative;
-    margin-bottom: 20px;
     overflow: hidden;
   }
 
@@ -80,10 +79,11 @@
 
   &__info {
     text-align: center;
+    padding: 25px 0 30px 0;
   }
 
   &__star {
-    margin: 5px 0;
+    margin: 10px 0;
     color: $yellow;
 
     i {
@@ -99,7 +99,6 @@
     color: $red;
     font-size: $font-size-xl;
     font-family: 'Roboto Slab', sans-serif;
-    margin-bottom: 20px;
   }
 
   &__del {

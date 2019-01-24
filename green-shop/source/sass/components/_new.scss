@@ -10,6 +10,7 @@
     font-size: $font-size-xl;
     margin-bottom: 10px;
     display: block;
+    transition: all .3s ease;
 
     &:hover {
       color: $green;

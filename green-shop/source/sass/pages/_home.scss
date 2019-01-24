@@ -2,9 +2,9 @@
 // Pages :: Home
 // ======================================================
 
-.slider {
-  width: 100%;
+.feature-slider {
   height: 580px;
+  width: 100%;
 
   &__image {
     width: 100%;
@@ -27,7 +27,7 @@
   }
 }
 
-.product {
+.feature-product {
   @extend %wrapper;
 
   flex-flow: column nowrap;
@@ -224,7 +224,8 @@
   }
 }
 
-.banner {
+.feature-banner {
+  display: block;
   margin-bottom: 50px;
 
   &__image {

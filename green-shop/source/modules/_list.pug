@@ -64,12 +64,21 @@ mixin lists-image(names, hrefs, images)
               img.sidebar-list__image.img-fluid(src=`../images/${images[index]}.png`)
             .sidebar-list__text #{name}
 
-mixin lists-tag(names, hrefs)
+mixin lists-tag(names, hrefs, active)
   ul.sidebar-list.sidebar-list--tag
     each name, index in names
-      li.sidebar-list__item
-        if (hrefs !== '' && hrefs !== undefined)
-          a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
-        else
-          
-          a.sidebar-list__link(href='#') #{name}
+      if (index != active - 1)
+        li.sidebar-list__item
+          if (hrefs !== '' && hrefs !== undefined)
+            a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+          else
+            
+            a.sidebar-list__link(href='#') #{name}
+      else
+        
+        li.sidebar-list__item
+          if (hrefs !== '' && hrefs !== undefined)
+            a.sidebar-list__link.active(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+          else
+            
+            a.sidebar-list__link.active(href='#') #{name}

@@ -1,6 +1,7 @@
 // ======================================================
 // Base :: Global
 // ======================================================
+
 body {
   font-size: $font-size-base;
   font-family: $font-family-base;
@@ -30,9 +31,7 @@ p {
 }
 
 .main {
-  @extend %wrapper;
-
-  flex-flow: column nowrap;
+  width: 100%;
 }
 
 .btn:focus {
@@ -45,6 +44,7 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  backface-visibility: hidden;
 }
 
 .btn-green {

@@ -6,16 +6,16 @@ block head
 block body
   block header
     include layout/_header
-  block main 
+  block main
     .main
-      .slider
-        - for( i = 0; i < 3; i++)
+      .feature-slider
+        - for(i = 0; i < 3; i++)
           .slider__image
             img(src="../images/slide.png", alt="")
-      .product
+      .feature-product
         +title('Sản phẩm nổi bật')
-        .product__spotlight.row.no-gutters
-          .col.product__grid.product__grid--spotlight
+        .feature-product__spotlight.row.no-gutters
+          .feature-product__grid.feature-product__grid--spotlight.col
             +product({
               image: 'sp04.png',
               name: 'Cây chân chim',
@@ -37,7 +37,7 @@ block body
               newPrice: '250.000',
               isNew: true,
             })
-          .col.product__grid.product__grid--spotlight
+          .feature-product__grid.feature-product__grid--spotlight.col
             +product({
               image: 'sp05.png',
               name: 'Cây Dạ Lam',
@@ -61,10 +61,10 @@ block body
               size: 'big',
               custom: 'd-none d-md-flex'
             })
-        .product__wrapper.row
-          .col-12.col-md-3.product__best
+        .feature-product__wrapper.row
+          .col-12.col-md-3.feature-product__best
             +title('Sản phẩm mua nhiều')
-            .product__grid.product__grid--best
+            .feature-product__grid.feature-product__grid--best
               +product({
                 image: 'sp15.png',
                 name: 'Cây Danh dự',
@@ -107,10 +107,10 @@ block body
                 newPrice: '580.000',
                 size: 'small'
               })
-          .col-12.col-md-9.product__discount
+          .feature-product__discount.col-12.col-md-9
             +title('Sản phẩm khuyến mãi')
-            .product__slider
-              .product__grid.product__grid--discount
+            .feature-product__slider
+              .feature-product__grid.feature-product__grid--discount
                 +product({
                   image: 'sp15.png',
                   name: 'Cây Danh dự',
@@ -153,7 +153,7 @@ block body
                   newPrice: '580.000',
                   sale: '45' 
                 })
-              .product__grid.product__grid--discount
+              .feature-product__grid.feature-product__grid--discount
                 +product({
                   image: 'sp15.png',
                   name: 'Cây Danh dự',
@@ -196,12 +196,12 @@ block body
                   newPrice: '580.000',
                   sale: '45' 
                 })
-        a.banner(href='#')
+        a.feature-banner(href='#')
           img.banner__image(src="../images/banner.png", alt="")
-        .product__hot
+        .feature-product__hot
           +title('Sản phẩm mới')
-          .product__slider
-            .product__grid.product__grid--hot
+          .feature-product__slider
+            .feature-product__grid.feature-product__grid--hot
               +product({
                 image: 'sp15.png',
                 name: 'Cây Danh dự',
@@ -251,7 +251,7 @@ block body
                 oldPrice: '250.000',
                 newPrice: '580.000',
               })
-            .product__grid.product__grid--hot
+            .feature-product__grid.feature-product__grid--hot
               +product({
                 image: 'sp15.png',
                 name: 'Cây Danh dự',

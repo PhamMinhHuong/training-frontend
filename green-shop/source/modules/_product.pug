@@ -5,7 +5,7 @@ mixin product({image, name, href, oldPrice, newPrice, description, sale, isNew, 
       )
     .product__image-wrapper
       a(href= href ? href : '#')
-        img.product__image(src=`../images/${image}`, alt="")
+        img.product__image.img-fluid(src=`../images/${image}`, alt="")
       .product__overlay
         .product__actions
           +buttons({

@@ -7,4 +7,10 @@
     display: flex;
     margin-bottom: 80px;
   }
+
+  &__sidebar-left {
+    .title {
+      margin-bottom: 20px;
+    }
+  }
 }

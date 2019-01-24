@@ -136,6 +136,17 @@
       text-overflow: ellipsis;
       display: block;
       padding: 10px 20px;
+      transition: all .2s ease;
+
+      &.active {
+        color: $white;
+        background: $green;
+      }
+
+      &:hover {
+        color: $white;
+        background: $green;
+      }
     }
   }
 }

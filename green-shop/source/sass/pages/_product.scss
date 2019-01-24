@@ -263,3 +263,13 @@
     }
   }
 }
+
+.product-list__list .product__image-wrapper:hover {
+  .product__image {
+    transform: scale(1);
+  }
+}
+
+.product-list__list .product__image-wrapper .product__image:hover {
+  transform: scale(1.2);
+}
