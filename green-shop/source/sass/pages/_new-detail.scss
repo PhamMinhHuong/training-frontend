@@ -3,6 +3,8 @@
 // ======================================================
 
 .new-detail {
+  @extend %wrapper;
+
   &__sidebar-left {
     .title {
       margin-bottom: 20px;

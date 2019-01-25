@@ -3,18 +3,16 @@ mixin lists(names, hrefs, active)
     each name, index in names
       if (index != active - 1)
         li.sidebar-list__item
-          if (hrefs !== '' && hrefs !== undefined)
-            a.sidebar-list__link(
+          if (hrefs !== [''] && hrefs !== undefined)
+            a.sidebar-list__link.text-truncate(
               class="sidebar-list__link"
-              class= `${active}` ? `${active}` : null
               href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
               i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
               | #{name}
           else
 
-            a(
+            a.text-truncate(
               class="sidebar-list__link"
-              class= `${active}` ? `${active}` : null
               href='#')
               i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
               | #{name} 
@@ -22,17 +20,15 @@ mixin lists(names, hrefs, active)
         
         li.sidebar-list__item.active
           if (hrefs !== '' && hrefs !== undefined)
-            a.sidebar-list__link(
+            a.sidebar-list__link.text-truncate(
               class="sidebar-list__link"
-              class= `${active}` ? `${active}` : null
               href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#')
               i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
               | #{name}
           else
 
-            a(
+            a.text-truncate(
               class="sidebar-list__link"
-              class= `${active}` ? `${active}` : null
               href='#')
               i.sidebar-list__icon.fas.fa-chevron-right.icon--xs.icon--gray
               | #{name}
@@ -46,20 +42,20 @@ mixin lists-color({name, href, active, color})
     .color-list__color(
       class= `${color}` ? `color-list__color--${color}` : null
       )
-    p.color-list__text #{name}
+    p.color-list__text.text-truncate #{name}
     
 mixin lists-image(names, hrefs, images)
   ul.sidebar-list.sidebar-list--image
     each name, index in names
       li.sidebar-list__item
         if (hrefs !== '' && hrefs !== undefined)
-          a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') 
+          a.sidebar-list__link.text-truncate(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') 
             .sidebar-list__image-wrapper
               img.sidebar-list__image.img-fluid(src=`../images/${images[index]}.png`)
             .sidebar-list__text #{name}
         else
 
-          a.sidebar-list__link(href='#')
+          a.sidebar-list__link.text-truncate(href='#')
             .sidebar-list__image-wrapper
               img.sidebar-list__image.img-fluid(src=`../images/${images[index]}.png`)
             .sidebar-list__text #{name}
@@ -70,15 +66,15 @@ mixin lists-tag(names, hrefs, active)
       if (index != active - 1)
         li.sidebar-list__item
           if (hrefs !== '' && hrefs !== undefined)
-            a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+            a.sidebar-list__link.text-truncate(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
           else
             
-            a.sidebar-list__link(href='#') #{name}
+            a.sidebar-list__link.text-truncate(href='#') #{name}
       else
         
         li.sidebar-list__item
           if (hrefs !== '' && hrefs !== undefined)
-            a.sidebar-list__link.active(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
+            a.sidebar-list__link.active.text-truncate(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name}
           else
             
-            a.sidebar-list__link.active(href='#') #{name}
+            a.sidebar-list__link.active.text-truncate(href='#') #{name}

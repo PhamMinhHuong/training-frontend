@@ -1,6 +1,6 @@
-mixin product({image, name, href, oldPrice, newPrice, description, sale, isNew, size, custom})
-  .product__item(
-      class= size ? `product__item--${size}` : null
+mixin products({image, name, href, oldPrice, newPrice, description, sale, isNew, size, custom})
+  .product(
+      class= size ? `product--${size}` : null
       class= custom ? `${custom}` : null
       )
     .product__image-wrapper
@@ -10,7 +10,7 @@ mixin product({image, name, href, oldPrice, newPrice, description, sale, isNew, 
         .product__actions
           +buttons({
             text: "MUA NGAY",
-            btnClass: 'product__buy'
+            btnClass: 'product__buy btn-primary--green'
           })
           +buttons-link({
             btnClass: 'product__search',
@@ -27,18 +27,18 @@ mixin product({image, name, href, oldPrice, newPrice, description, sale, isNew, 
             iconColor: 'black'
           })
       if (sale !== '' && sale !== undefined)
-        p.product__sale -#{sale}%
+        p.product__status.product__status--sale -#{sale}%
       if (isNew == true) 
-        p.product__new New
+        p.product__status.product__status--new New
     .product__info
       a.product__name(href= href ? href : '#') #{name}
-      .product__star
-        i.fas.fa-star
-        i.fas.fa-star
-        i.fas.fa-star
-        i.fas.fa-star
-        i.fas.fa-star-half-alt
+      .product__stars
+        i.fas.fa-star.product__star
+        i.fas.fa-star.product__star
+        i.fas.fa-star.product__star
+        i.fas.fa-star.product__star
+        i.fas.fa-star-half-alt.product__star
       if (description !== '' && description !== undefined)
         p.product__description #{description}
       p.product__price #{newPrice} đ
-        span.product__del #{oldPrice} đ
+        span.product__old-price #{oldPrice} đ

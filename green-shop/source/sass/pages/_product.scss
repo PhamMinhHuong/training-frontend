@@ -5,6 +5,14 @@
 .product-list {
   @extend %wrapper;
 
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__content {
+    margin-bottom: 190px;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -23,7 +31,6 @@
   }
 
   &__pagination {
-    margin-bottom: 50px;
     display: flex;
   }
 
@@ -97,11 +104,17 @@
     width: 100%;
 
     &__label {
+      width: 100%;
       margin-bottom: 10px;
       margin-left: 0;
+
+      &#product-count {
+        margin-left: 0;
+      }
     }
 
     &__select {
+      width: 100%;
       margin-bottom: 10px;
     }
   }
@@ -138,26 +151,26 @@
 .product-list__list {
   grid-template-columns: 1fr;
 
-  .product__item {
+  .product {
     flex-flow: row nowrap;
     position: relative;
     align-items: stretch;
   }
 
   .product__image-wrapper {
-    width: 220px;
+    width: 230px;
     height: auto;
     position: static;
     margin-bottom: 0;
   }
 
-  .product__del {
+  .product__old-price {
     display: none;
   }
 
   .product__info {
     text-align: left;
-    padding: 15px 40px 55px 40px;
+    padding: 15px 40px 70px 40px;
     flex: 1;
   }
 
@@ -181,10 +194,13 @@
   }
 
   .product__search {
-    border: 1px solid rgba($black, .3);
+    border: 1px solid rgba($black, .1);
 
     &:hover {
-      background: rgba($black, .1);
+      border: 1px solid rgba($green, .8);
+      .product__icon {
+        color: $green;
+      }
     }
   }
 
@@ -195,18 +211,13 @@
   }
 
   .product__like {
-    display: flex;
-    border: 1px solid rgba($black, .3);
-
-    &:hover {
-      background: rgba($black, .1);
-    }
+    @extend .product__search;
   }
 
   @include respond-to(smallphone-and-down) {
     grid-template-columns: 1fr;
 
-    .product__item {
+    .product {
       flex-flow: column nowrap;
     }
 
@@ -229,7 +240,7 @@
       }
     }
 
-    .product__del {
+    .product__old-price {
       display: none;
     }
 
@@ -272,4 +283,14 @@
 
 .product-list__list .product__image-wrapper .product__image:hover {
   transform: scale(1.2);
+}
+
+.banner {
+  &__image-wrapper {
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+  }
 }

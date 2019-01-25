@@ -4,7 +4,7 @@
   overflow: hidden;
   width: 100%;
   text-overflow: ellipsis;
-
+  min-width: 0;
   &:after {
     @include pseudo;
 
@@ -16,6 +16,8 @@
   }
 
   &__text {
+    min-width: 0;
+    max-width: 100%;
     white-space: nowrap;
     display: inline-block;
     color: $green;
@@ -36,15 +38,15 @@
       z-index: 100;
     }
   }
-}
 
-.title--normal {
-  margin-bottom: 40px;
-  overflow: hidden;
-  width: 100%;
-  text-overflow: ellipsis;
-  color: $green;
-  font-size: $font-size-xl;
-  font-weight: $bold;
-  white-space: nowrap;
+  &--normal {
+    margin-bottom: 40px;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    color: $green;
+    font-size: $font-size-xl;
+    font-weight: $bold;
+    white-space: nowrap;
+  }
 }

@@ -1,11 +1,15 @@
 // ======================================================
-// Layout :: Prodct Aside
+// Layout :: Prodct Side Bar
 // ======================================================
 
-.product-sidebar {
+.product-list__sidebar {
   width: 100%;
 
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__color-list {
+    display: grid;
   }
 }

@@ -1,0 +1,27 @@
+.breadcrumb {
+  background: transparent;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 16px;
+  padding: 0 15px;
+
+  &__item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 150px;
+
+    &.active {
+      color: $green;
+    }
+  }
+
+  &__link {
+    color: $gray;
+
+    &:hover {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+}

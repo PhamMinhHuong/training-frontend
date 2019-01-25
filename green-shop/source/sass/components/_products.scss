@@ -1,19 +1,25 @@
 .product {
-  &__item {
-    display: flex;
-    flex-flow: column nowrap;
-    border: 1px solid rgba($border, .9);
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid rgba($border, .9);
+
+  &__image {
+    transition: all .3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  &__item--big {
-    grid-column: 1 / -1;
-    border: 1px solid rgba($border, .9);
-  }
 
   &__image-wrapper {
     width: 100%;
     position: relative;
     overflow: hidden;
+    &:hover {
+      .product__image {
+        transform: scale(1.2);
+      }
+    }
   }
 
   &__overlay {
@@ -32,39 +38,26 @@
     }
   }
 
-  &__image {
-    transition: all .3s ease;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__new {
+  &__status {
     position: absolute;
     top: 15px;
     left: 15px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $white;
-    background: $green;
-  }
 
-  &__sale {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $white;
-    background: $red;
+    &--new {
+      color: $white;
+      background: $green;
+    }
+
+    &--sale {
+      color: $white;
+      background: $red;
+    }
   }
 
   &__name {
@@ -79,16 +72,17 @@
 
   &__info {
     text-align: center;
-    padding: 25px 0 30px 0;
+    padding: 20px 0;
+  }
+
+  &__stars {
+    margin: 10px 0;
+    color: $yellow;
   }
 
   &__star {
-    margin: 10px 0;
-    color: $yellow;
-
-    i {
-      margin-right: 2px;
-    }
+    margin-right: 2px;
+    font-size: $font-size-sm;
   }
 
   &__description {
@@ -101,7 +95,7 @@
     font-family: 'Roboto Slab', sans-serif;
   }
 
-  &__del {
+  &__old-price {
     color: $gray;
     margin-left: 15px;
     font-size: $font-size-sm;
@@ -129,7 +123,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease;
+    transition: all .15s ease;
     padding: 0 20px;
     &:hover {
       background: transparent;
@@ -139,7 +133,6 @@
   }
 
   &__search {
-    font-size: $font-size-base;
     margin-left: 10px;
     width: 40px;
     height: 40px;
@@ -148,39 +141,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .3s ease;
   }
 
   &__like {
-    font-size: $font-size-base;
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background: $white;
+    @extend .product__search;
+
     display: none;
-    align-items: center;
-    justify-content: center;
+    &:hover {
+      border: 1px solid rgba($green, .8);
+      background: transparent;
+      color: $white;
+    }
+  }
+
+  &__icon {
+    transition: all .3s ease;
+    font-size: $icon-size-sm;
   }
 
   @include respond-to(phone-and-down) {
+    &__new {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__sale {
+      width: 40px;
+      height: 40px;
+    }
+
     &__price {
       font-size: $font-size-sm;
     }
 
-    &__del {
+    &__old-price {
       display: block;
       margin: auto;
     }
   }
 }
 
-.product__image-wrapper:hover {
-  .product__image {
-    transform: scale(1.2);
-  }
-}
-
-.product__item .product__image-wrapper {
+.product .product__image-wrapper {
   height: 220px;
 
   @include respond-to(phone-and-down) {
@@ -192,20 +194,29 @@
   }
 }
 
-.product__item--big .product__image-wrapper {
-  height: 480px;
+.product--big {
+  grid-column: 1 / -1;
+  border: 1px solid rgba($border, .9);
+
+  .product__image-wrapper {
+    height: 480px;
+  }
 
   @include respond-to(phone-and-down) {
-    height: 400px;
+    .product__image-wrapper {
+      height: 400px;
+    }
   }
 
   @include respond-to(smallphone-and-down) {
-    height: 300px;
+    .product__image-wrapper {
+      height: 300px;
+    }
   }
 }
 
-.product__item--small {
-  padding: 18.3px;
+.product--small {
+  padding: 20px;
   flex-flow: row nowrap;
   min-width: 100px;
 
@@ -225,7 +236,7 @@
     margin-bottom: 0;
   }
 
-  .product__del {
+  .product__old-price {
     display: none;
   }
 
@@ -233,7 +244,7 @@
     display: none;
   }
 
-  .product__star {
+  .product__stars {
     margin: 8px 0;
   }
 

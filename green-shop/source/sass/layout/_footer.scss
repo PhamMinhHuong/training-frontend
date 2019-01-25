@@ -81,7 +81,7 @@
     }
   }
 
-  @include respond-to(tablet-and-down) {
+  @include respond-to(phone-and-down) {
     margin-bottom: 30px;
 
     &__text {
@@ -184,8 +184,15 @@
   }
 
   @include respond-to(tablet-and-down) {
+    margin-bottom: 30px;
+    text-align: center;
+
     &__image {
       margin-bottom: 30px;
+    }
+
+    &__item {
+      justify-content: center;
     }
   }
 }
@@ -195,7 +202,12 @@
   flex-flow: row wrap;
 
   &__block {
-    width: 25%;
+    flex: 1;
+
+    &:last-child {
+      flex: none;
+      margin-left: auto;
+    }
   }
 
   &__icon {
@@ -212,6 +224,7 @@
   &__btn {
     color: $gray-light;
     padding-left: 0;
+    padding-right: 0;
     font-size: $font-size-base;
     font-weight: $normal;
     text-align: left;
@@ -221,33 +234,36 @@
     }
   }
 
-  @include respond-to(phone-and-up) {
-    &__block {
+  @include respond-to(phone-and-down) {
 
-      &:first-child {
-        width: 30%;
-      }
+    &__block {
+      flex: none;
+      width: 33.33%;
+      margin-bottom: 30px;
 
       &:last-child {
-        width: 20%;
+        margin-left: 0;
       }
     }
   }
 
-  @include respond-to(phone-and-down) {
-
+  @include respond-to(smallphone-and-down) {
     &__block {
+      flex: none;
       width: 100%;
-      margin-bottom: 30px;
     }
   }
 }
 
 .f-question {
+  height: 66px;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
 
   &__btn {
+    width: 100%;
+    height: 100%;
     color: $gray-light;
     font-size: $font-size-base;
 
@@ -263,5 +279,9 @@
 
   &__btn {
     padding-left: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

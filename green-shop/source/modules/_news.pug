@@ -1,10 +1,10 @@
-mixin news({day, title, href, des, image})
-  .new__item
+mixin news({day, title, href, description, image})
+  .new
     a.new__image-wrapper(href= href ? href : '#') 
         img.new__image(src=`../images/${image}`, alt="")
     p.new__date #{day}
     a.new__title(href= href ? href : '#') #{title}
-    p.new__des #{des}
+    p.new__description #{description}
     a.new__readmore(href= href ? href : '#') Đọc tiếp  
 
 mixin posts({name, href, date, time, comment, image, description})

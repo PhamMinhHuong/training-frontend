@@ -1,5 +1,5 @@
 .sidebar-list {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   &--default {
     width: 100%;
   }
@@ -11,13 +11,16 @@
 
   &__icon {
     margin-right: 5px;
+    font-size: $font-size-xxs;
     transition: all .3s ease;
+    transform: translateY(-1px);
   }
 
   &__link {
     color: $gray;
     padding: 10px 0;
-    display: block;
+    display: flex;
+    align-items: center;
     transition: all .3s ease;
 
     &:hover {
@@ -48,6 +51,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 10px;
 
   &__item {
     display: flex;
@@ -99,7 +103,7 @@
 
 .sidebar-list--image {
   .sidebar-list__item {
-    border-bottom: none;
+    border-bottom: 0;
 
     .sidebar-list__link {
       display: flex;
@@ -124,7 +128,7 @@
 
   .sidebar-list__item {
     max-width: 100%;
-    border-bottom: none;
+    border-bottom: 0;
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 10px;
