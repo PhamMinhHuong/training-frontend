@@ -233,11 +233,16 @@
     display: none;
   }
 
+  .product__star {
+    margin: 8px 0;
+  }
+
   .product__info {
     display: flex;
     flex-flow: column nowrap;
     flex: 1;
     align-items: flex-start;
+    padding: 0;
     padding-left: 15px;
   }
 
