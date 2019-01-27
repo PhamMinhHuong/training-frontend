@@ -2,7 +2,11 @@
 // Page :: New
 // ======================================================
 
-.product-new {
+.product-news {
+  @extend %wrapper;
+
+  flex-flow: column nowrap;
+
   &__pagination {
     display: flex;
     margin-bottom: 80px;
@@ -12,9 +16,5 @@
     .title {
       margin-bottom: 20px;
     }
-  }
-
-  &__wrapper {
-    @extend %wrapper;
   }
 }

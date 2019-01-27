@@ -49,13 +49,13 @@ mixin lists-image(names, hrefs, images)
     each name, index in names
       li.sidebar-list__item
         if (hrefs !== '' && hrefs !== undefined)
-          a.sidebar-list__link.text-truncate(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') 
+          a.sidebar-list__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') 
             .sidebar-list__image-wrapper
               img.sidebar-list__image.img-fluid(src=`../images/${images[index]}.png`)
             .sidebar-list__text #{name}
         else
 
-          a.sidebar-list__link.text-truncate(href='#')
+          a.sidebar-list__link(href='#')
             .sidebar-list__image-wrapper
               img.sidebar-list__image.img-fluid(src=`../images/${images[index]}.png`)
             .sidebar-list__text #{name}

@@ -28,7 +28,7 @@ $(function(){
 
   // Slider Sale Product
 
-  $('.feature-product__slider').slick({
+  $('.product__slider').slick({
     dots: false,
     infinite: false
   })

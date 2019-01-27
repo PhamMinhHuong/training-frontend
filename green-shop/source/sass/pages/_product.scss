@@ -5,10 +5,6 @@
 .product-list {
   @extend %wrapper;
 
-  &__wrapper {
-    width: 100%;
-  }
-
   &__content {
     margin-bottom: 190px;
   }
@@ -22,6 +18,14 @@
     .product__overlay {
       transition: none;
     }
+
+    .product__info {
+      background: $white;
+    }
+  }
+
+  &__sidebar {
+    margin-bottom: 30px;
   }
 
   &__sort {
@@ -103,14 +107,11 @@
   @include respond-to(phone-and-down) {
     width: 100%;
 
-    &__label {
+    .sort-option__label {
       width: 100%;
       margin-bottom: 10px;
       margin-left: 0;
-
-      &#product-count {
-        margin-left: 0;
-      }
+      justify-content: flex-start;
     }
 
     &__select {

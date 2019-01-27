@@ -7,143 +7,143 @@ block body
   block header
     include layout/_header
   block main
-    .main.product-list
-      .product-list__wrapper.row
-        +breadcrumb(
-        ['Home', 'Danh sách sản phẩm'],
-        ['home', 'product'])
-        .product-list__sidebar.sidebar.sidebar-left.col-12.col-md-3
-          include layout/_product-sidebar
-        .product-list__content.col-12.col-md-9
-          .product-list__banner.banner
-            a.banner__image-wrapper(href="")
-              img.banner__image(src="../images/banner01.png")
-          .product-list__sort.product-sort
-            .product-sort__grid
-              +buttons({
-                btnClass: 'product-sort__btn product-sort__grid-btn active',
-                iconFont: 'fas fa-th',
-                iconSize: 'md',
-                iconColor: 'gray',
-                iconClass: 'product-sort__icon'
+    .main
+      .product-list
+        .product-list__wrapper.row
+          +breadcrumb(
+          ['Home', 'Danh sách sản phẩm'],
+          ['home', 'product'])
+          .sidebar.sidebar-left.col-12.col-md-3
+            include layout/_product-sidebar
+          .product-list__content.col-12.col-md-9
+            .product-list__banner.banner
+              a.banner__image-wrapper(href="")
+                img.banner__image(src="../images/banner01.png")
+            .product-list__sort.product-sort
+              .product-sort__grid
+                +buttons({
+                  btnClass: 'product-sort__btn product-sort__grid-btn active',
+                  iconFont: 'fas fa-th',
+                  iconSize: 'md',
+                  iconColor: 'gray',
+                  iconClass: 'product-sort__icon'
+                })
+                +buttons({
+                  btnClass: 'product-sort__btn product-sort__list-btn',
+                  iconFont: 'fas fa-th-list',
+                  iconSize: 'md',
+                  iconColor: 'gray',
+                  iconClass: 'product-sort__icon'
+                })
+              form.product-sort__option.sort-option.form-inline
+                label.sort-option__label(for="product-name") Sắp xếp theo
+                select.sort-option__select#product-name
+                  option Tên sản phẩm
+                  option Giá sản phẩm
+                label.sort-option__label(for="product-count") Show
+                select.sort-option__select#product-count
+                  option 5
+                  option 10
+                  option 15
+            .product-list__grid
+              +products({
+                image: 'sp15.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
               })
-              +buttons({
-                btnClass: 'product-sort__btn product-sort__list-btn',
-                iconFont: 'fas fa-th-list',
-                iconSize: 'md',
-                iconColor: 'gray',
-                iconClass: 'product-sort__icon'
+              +products({
+                image: 'sp12.png',
+                name: 'Cây dứa nhỏ',
+                oldPrice: '850.000',
+                newPrice: '250.000',
+                isNew: true,
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
               })
-            form.product-sort__option.sort-option.form-inline
-              label.sort-option__label#product-name Sắp xếp theo
-              select.sort-option__select#product-name
-                option Tên sản phẩm
-                option Giá sản phẩm
-              label.sort-option__label#product-count Show
-              select.sort-option__select#product-count
-                option 5
-                option 10
-                option 15
-          .product-list__grid
-            +products({
-              image: 'sp15.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '250.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp12.png',
-              name: 'Cây dứa nhỏ',
-              oldPrice: '850.000',
-              newPrice: '250.000',
-              isNew: true,
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp11.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '250.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp02.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '850.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp08.png',
-              name: 'Cây Dạ Lam',
-              oldPrice: '250.000',
-              newPrice: '780.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bsạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-            +products({
-              image: 'sp06.png',
-              name: 'Cây Danh dự',
-              oldPrice: '250.000',
-              newPrice: '580.000',
-              description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-            })
-          nav.product-list__pagination
-            ul.pagination
-              li.page-item
-                a(href="#").page-link Trang trước
-              li.page-item
-                a(href="#").page-link.active 1
-              li.page-item
-                a(href="#").page-link 2
-              li.page-item
-                a(href="#").page-link 3
-              li.page-item
-                a(href="#").page-link 4
-              li.page-item
-                a(href="#").page-link Trang cuối
-    
+              +products({
+                image: 'sp11.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '250.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp02.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '850.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp08.png',
+                name: 'Cây Dạ Lam',
+                oldPrice: '250.000',
+                newPrice: '780.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bsạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+              +products({
+                image: 'sp06.png',
+                name: 'Cây Danh dự',
+                oldPrice: '250.000',
+                newPrice: '580.000',
+                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              })
+            nav.product-list__pagination
+              ul.pagination
+                li.page-item
+                  a(href="#").page-link Trang trước
+                li.page-item
+                  a(href="#").page-link.active 1
+                li.page-item
+                  a(href="#").page-link 2
+                li.page-item
+                  a(href="#").page-link 3
+                li.page-item
+                  a(href="#").page-link 4
+                li.page-item
+                  a(href="#").page-link Trang cuối
   block footer
     include layout/_footer

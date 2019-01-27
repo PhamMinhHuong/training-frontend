@@ -108,17 +108,19 @@
     .sidebar-list__link {
       display: flex;
       flex-flow: row nowrap;
+      align-items: flex-start;
     }
+  }
+
+  .sidebar-list__text {
+    word-break: break-word;
+    flex: 1;
   }
 
   .sidebar-list__image-wrapper {
     margin-right: 10px;
     width: 80px;
     height: 80px;
-  }
-
-  .sidebar-list__text {
-    flex: 1;
   }
 }
 

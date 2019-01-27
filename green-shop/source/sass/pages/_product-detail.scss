@@ -3,12 +3,9 @@
 // ======================================================
 
 .product-detail {
-  display: flex;
-  flex-flow: column nowrap;
+  @extend %wrapper;
 
-  &__wrapper {
-    @extend %wrapper;
-  }
+  flex-flow: column nowrap;
 
   &__grid {
     display: grid;
@@ -81,7 +78,7 @@
 
   &__star {
     color: $yellow;
-    font-size: $font-size-xs;
+    font-size: $font-size-base;
     margin: 10px 0;
   }
 
@@ -191,6 +188,7 @@
     text-transform: uppercase;
     padding: 10px 70px;
     transition: all .3s ease;
+    font-size: $font-size-sm;
 
     @include respond-to(tablet-and-down) {
       padding: 10px 50px;
@@ -203,7 +201,7 @@
 
   .nav-tabs .nav-link {
     border-radius: 0;
-    transition: all .3s ease;
+    transition: all .15s ease;
 
     &:hover {
       border: 1px solid rgba($gray, .3);
@@ -215,5 +213,7 @@
   .nav-tabs .nav-link.active {
     border-top: 2px solid $gray;
     color: $green;
+    background: transparent;
+    margin-top: -1px;
   }
 }

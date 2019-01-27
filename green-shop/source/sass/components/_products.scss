@@ -64,6 +64,10 @@
     font-size: $font-size-lg;
     color: $black;
     transition: all .3s ease;
+    display: inline-block;
+    word-break: break-all;
+    padding: 0 5px;
+
     &:hover {
       color: $green;
       text-decoration: none;
@@ -278,8 +282,12 @@
       font-size: $font-size-base;
     }
 
-    .product__star {
+    .product__stars {
       margin: 0;
+    }
+
+    .product__star {
+      font-size: $font-size-base;
     }
   }
 }

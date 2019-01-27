@@ -3,17 +3,7 @@
 // ======================================================
 
 .product-cart {
-  &__table {
-    border: 1px solid rgba($gray-light, .3);
-
-    tr {
-      border: 1px solid rgba($gray-light, .3);
-
-      td {
-        border: 1px solid rgba($gray-light, .3);
-      }
-    }
-  }
+  @extend %wrapper;
 
   &__checkout {
     text-align: right;
@@ -22,7 +12,18 @@
 }
 
 .cart-table {
+  width: 100%;
+  border: 1px solid rgba($gray-light, .3);
   margin-bottom: 45px;
+
+  tr {
+    border: 1px solid rgba($gray-light, .3);
+
+    td {
+      border: 1px solid rgba($gray-light, .3);
+    }
+  }
+
 
   &__head {
     tr {
@@ -42,11 +43,6 @@
       }
     }
   }
-}
-
-.cart-table:first-child {
-  width: 180px;
-  padding: 15px;
 }
 
 .cart-body {

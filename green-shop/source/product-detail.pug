@@ -7,149 +7,150 @@ block body
   block header
     include layout/_header
   block main
-    .main.product-detail
-      .product-detail__wrapper.row
-        +breadcrumb(
-        ['Home', 'Cây dạ lam'],
-        ['home', 'detail'])
-        .product-detail__overview.overview-slider.col-12.col-md-6
-          .overview-slider__wrapper
-            .overview-slider__main
-              - let sliderMainImages = ['sp01', 'sp02', 'sp03', 'sp04', 'sp05', 'sp06', 'sp07']
-              each image in sliderMainImages
-                .overview-slider__image-wrapper
-                  img.overview-slider__image.img-fluid(src="../images/" + image + ".png")
-            .overview-slider__nav
-              - let sliderNavImages = ['sp01', 'sp02', 'sp03', 'sp04', 'sp05', 'sp06', 'sp07']
-              each image in sliderNavImages
-                .overview-slider__image-wrapper
-                  img.overview-slider__image.img-fluid(src="../images/" + image + ".png")
-        .product-detail__info.product-info.col-12.col-md-6
-          p.product-info__name Cây dạ lam
-          .product-info__star
-            - for ( i = 0 ; i < 4; i++ )
-              i.fas.fa-star
-            i.fas.fa-star-half-alt
-          p.product-info__price 4.099.000 đ
-            span.product-info__old-price 4.099.000 đ
-          p.product-info__description Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
-          .product-info__count.product-count
-            p.product-count__text Số lượng
-            button.product-count__btn.product-count__decrease -
-            p.product-count__value 1
-            button.product-count__btn.product-count__increase +
-          .product-info__actions
-            +buttons({
-              text: "MUA NGAY",
-              btnClass: 'product__buy'
-            })
-            +buttons-link({
-              btnClass: 'product__search',
-              iconClass: 'product__icon',
-              iconFont: 'fas fa-search',
-              iconSize: 'md',
-              iconColor: 'black'
-            })
-            +buttons({
-              btnClass: 'product__like',
-              iconClass: 'product__icon',
-              iconFont: 'fas fa-heart',
-              iconSize: 'md',
-              iconColor: 'black'
-            })
-          .product-info__social
-            .fb-like(data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false")
-        .product-detail__tab-info.product-tab.col-12
-          .nav.nav-tabs(role="tablist")
-            .nav-item.nav-link.product-tab__item.active(href="#tab1" data-toggle="tab" role="tab") Thông tin sản phẩm
-            .nav-item.nav-link.product-tab__item(href="#tab2" data-toggle="tab" role="tab") Khách hàng đánh giá
-            .nav-item.nav-link.product-tab__item(href="#tab3" data-toggle="tab" role="tab") Thẻ tag
-          .tab-content.product-tab__content
-            #tab1.tab-pane.fade.show.active(role="tabpanel")
-              p
-              | Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn.
-              br
-              br
-              | Tên khoa học: Calathea zebrina
-              br
-              br
-              | Họ thực vật: Marantaceae (Củ dong).
-              br
-              br
-              |Chiều cao: 0,8-1,2m
-              br
-              br
-              | Cây dạ lam có nguồn gốc từ Brazil, được du nhập và phân bố rộng khắp ở Việt Nam.
-              br
-              br
-              | Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
-              | Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh.
-              | Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng.
-              | Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.  
-            #tab2.tab-pane.fade(role="tabpanel") Khách hàng đánh giá
-            #tab3.tab-pane.fade(role="tabpanel") Thẻ tag
-        .product-detail__category.col-12
-          +title('Sản phẩm cùng loại')
-          .product__slider
-            .product-detail__grid
-              +products({
-                image: 'sp15.png',
-                name: 'Cây Danh dự',
-                oldPrice: '250.000',
-                newPrice: '250.000',
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+    .main
+      .product-detail
+        .product-detail__wrapper.row
+          +breadcrumb(
+          ['Home', 'Cây dạ lam'],
+          ['home', 'detail'])
+          .product-detail__overview.overview-slider.col-12.col-md-6
+            .overview-slider__wrapper
+              .overview-slider__main
+                - let sliderMainImages = ['sp01', 'sp02', 'sp03', 'sp04', 'sp05', 'sp06', 'sp07']
+                each image in sliderMainImages
+                  .overview-slider__image-wrapper
+                    img.overview-slider__image.img-fluid(src="../images/" + image + ".png")
+              .overview-slider__nav
+                - let sliderNavImages = ['sp01', 'sp02', 'sp03', 'sp04', 'sp05', 'sp06', 'sp07']
+                each image in sliderNavImages
+                  .overview-slider__image-wrapper
+                    img.overview-slider__image.img-fluid(src="../images/" + image + ".png")
+          .product-detail__info.product-info.col-12.col-md-6
+            p.product-info__name Cây dạ lam
+            .product-info__star
+              - for ( i = 0 ; i < 4; i++ )
+                i.fas.fa-star
+              i.fas.fa-star-half-alt
+            p.product-info__price 4.099.000 đ
+              span.product-info__old-price 4.099.000 đ
+            p.product-info__description Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+            .product-info__count.product-count
+              p.product-count__text Số lượng
+              button.product-count__btn.product-count__decrease -
+              p.product-count__value 1
+              button.product-count__btn.product-count__increase +
+            .product-info__actions
+              +buttons({
+                text: "MUA NGAY",
+                btnClass: 'product__buy'
               })
-              +products({
-                image: 'sp12.png',
-                name: 'Cây dứa nhỏ',
-                oldPrice: '850.000',
-                newPrice: '250.000',
-                isNew: true,
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              +buttons-link({
+                btnClass: 'product__search',
+                iconClass: 'product__icon',
+                iconFont: 'fas fa-search',
+                iconSize: 'md',
+                iconColor: 'black'
               })
-              +products({
-                image: 'sp11.png',
-                name: 'Cây Dạ Lam',
-                oldPrice: '250.000',
-                newPrice: '250.000',
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+              +buttons({
+                btnClass: 'product__like',
+                iconClass: 'product__icon',
+                iconFont: 'fas fa-heart',
+                iconSize: 'md',
+                iconColor: 'black'
               })
-              +products({
-                image: 'sp02.png',
-                name: 'Cây Danh dự',
-                oldPrice: '250.000',
-                newPrice: '850.000',
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-              })
-            .product-detail__grid
-              +products({
-                image: 'sp15.png',
-                name: 'Cây Danh dự',
-                oldPrice: '250.000',
-                newPrice: '250.000',
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-              })
-              +products({
-                image: 'sp12.png',
-                name: 'Cây dứa nhỏ',
-                oldPrice: '850.000',
-                newPrice: '250.000',
-                isNew: true,
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-              })
-              +products({
-                image: 'sp11.png',
-                name: 'Cây Dạ Lam',
-                oldPrice: '250.000',
-                newPrice: '250.000',
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-              })
-              +products({
-                image: 'sp02.png',
-                name: 'Cây Danh dự',
-                oldPrice: '250.000',
-                newPrice: '850.000',
-                description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
-              })
+            .product-info__social
+              .fb-like(data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false")
+          .product-detail__tab-info.product-tab.col-12
+            .nav.nav-tabs(role="tablist")
+              .nav-item.nav-link.product-tab__item.active(href="#tab1" data-toggle="tab" role="tab") Thông tin sản phẩm
+              .nav-item.nav-link.product-tab__item(href="#tab2" data-toggle="tab" role="tab") Khách hàng đánh giá
+              .nav-item.nav-link.product-tab__item(href="#tab3" data-toggle="tab" role="tab") Thẻ tag
+            .tab-content.product-tab__content
+              #tab1.tab-pane.fade.show.active(role="tabpanel")
+                p
+                | Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn.
+                br
+                br
+                | Tên khoa học: Calathea zebrina
+                br
+                br
+                | Họ thực vật: Marantaceae (Củ dong).
+                br
+                br
+                |Chiều cao: 0,8-1,2m
+                br
+                br
+                | Cây dạ lam có nguồn gốc từ Brazil, được du nhập và phân bố rộng khắp ở Việt Nam.
+                br
+                br
+                | Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+                | Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh.
+                | Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng.
+                | Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.  
+              #tab2.tab-pane.fade(role="tabpanel") Khách hàng đánh giá
+              #tab3.tab-pane.fade(role="tabpanel") Thẻ tag
+          .product-detail__category.col-12
+            +title('Sản phẩm cùng loại')
+            .product__slider
+              .product-detail__grid
+                +products({
+                  image: 'sp15.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
+                +products({
+                  image: 'sp12.png',
+                  name: 'Cây dứa nhỏ',
+                  oldPrice: '850.000',
+                  newPrice: '250.000',
+                  isNew: true,
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
+                +products({
+                  image: 'sp11.png',
+                  name: 'Cây Dạ Lam',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
+                +products({
+                  image: 'sp02.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '850.000',
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
+              .product-detail__grid
+                +products({
+                  image: 'sp15.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
+                +products({
+                  image: 'sp12.png',
+                  name: 'Cây dứa nhỏ',
+                  oldPrice: '850.000',
+                  newPrice: '250.000',
+                  isNew: true,
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
+                +products({
+                  image: 'sp11.png',
+                  name: 'Cây Dạ Lam',
+                  oldPrice: '250.000',
+                  newPrice: '250.000',
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
+                +products({
+                  image: 'sp02.png',
+                  name: 'Cây Danh dự',
+                  oldPrice: '250.000',
+                  newPrice: '850.000',
+                  description: 'Cây ngọc ngân là loại cây dành cho tình yêu. Đây là món quà bất ngờ để bạn tặng cho "người ấy". Ngọc ngân (valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.'
+                })
   block footer
     include layout/_footer
