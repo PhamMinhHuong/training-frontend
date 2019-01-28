@@ -1,0 +1,50 @@
+extends layout/_default
+
+block head
+  +head('Green Shop | Đăng ký')
+
+block body
+  block header
+    include layout/_header
+  block main
+    .main
+      .register
+        .register__wrapper.row
+          +breadcrumb(
+          ['Home', 'Đăng ký'],
+          ['home', 'register'])
+          h3.title.title--normal.col-12 Thông tin cá nhân
+          form.register__form
+            .form-row.register__form-row
+              .form-group.register__form-group.col-12.col-md-6
+                label(for="register-name") Họ và tên
+                input.form-control.register__input#register-name(type="text")
+              .form-group.register__form-group.col-12.col-md-6
+                label(for="register-phone") Số điện thoại
+                input.form-control.register__input#register-phone(type="text")
+              .form-group.register__form-group.col-12.col-md-6
+                label(for="register-email") Địa chỉ email
+                input.form-control.register__input#register-name(type="email")
+              .form-group.register__form-group.col-12.col-md-6
+                label(for="register-website") Website của bạn
+                input.form-control.register__input#register-website(type="text")
+              .login-form__group.col-12
+                input.login-form__checkbox#login-checker(type="checkbox")
+                label.login-form__checkbox-label(for="login-checker") Ghi nhớ tài khoản
+              h3.title.title--normal.col-12 Thông tin tài khoản
+              .form-group.register__form-group.col-12.col-md-6
+                label(for="register-password") Mật khẩu
+                input.form-control.register__input#register-password(type="text")
+              .form-group.register__form-group.col-12.col-md-6
+                label(for="register-repassword") Nhập lại mật khẩu
+                input.form-control.register__input#register-repassword(type="text")
+              +buttons-link({
+                text: "Quay lại",
+                btnClass: 'login-letter__btn btn-primary btn-primary--white'
+              })
+              +buttons-link({
+                text: "Đăng ký",
+                btnClass: 'login-letter__btn btn-primary btn-primary--green'
+              })
+  block footer
+    include layout/_footer

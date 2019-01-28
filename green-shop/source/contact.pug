@@ -1,0 +1,56 @@
+extends layout/_default
+
+block head
+  +head('Green Shop | Liên hệ')
+
+block body
+  block header
+    include layout/_header
+  block main
+    .main
+      .contact
+        .contact__wrapper.row
+          +breadcrumb(
+          ['Home', 'Liên hệ'],
+          ['home', 'register'])
+      .contact-map
+        img.img-fluid(src="../images/map.png", alt="")
+      .contact
+        .contact__wrapper.row
+          h3.title.title--normal.col-12 Thông tin liên hệ
+          .col-12.col-md-6
+            form
+              .form-group.login-form__group
+                label.login-form__label(for="contact-name") Họ và tên
+                input.form-control.login-form__input#contact-email(type="text")
+              .form-group.login-form__group
+                label.login-form__label(for="contact-email") Địa chỉ email
+                input.form-control.login-form__input#contact-email(type="password")
+              .form-group.login-form__group
+                label.login-form__label(for="contact-phone") Số ĐT
+                input.form-control.login-form__input#contact-phone(type="text")
+              .form-group.login-form__group
+                label.login-form__label(for="contact-comment") Bình luận
+                textarea.form-control.login-form__input#contact-comment(type="password")
+
+          .col-12.col-md-6
+            a.f-info__image-wrapper(href="#")
+              img.f-info__image(src="../images/logo-footer.png", alt="")
+            p.f-info__text Green shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển 
+            ul.f-info__contact
+              li.f-info__item
+                +icons({
+                  iconClass: 'f-info__icon',
+                  iconFont: 'fas fa-mobile-alt',
+                  iconSize: 'sm',
+                  iconColor: 'green'})
+                p Điện thoại : (84-4) 66.558.868
+              li.f-info__item
+                +icons({
+                  iconClass: 'f-info__icon',
+                  iconFont: 'fas fa-envelope',
+                  iconSize: 'sm',
+                  iconColor: 'green'})
+                p Email : info@dkt.com.vn
+  block footer
+    include layout/_footer

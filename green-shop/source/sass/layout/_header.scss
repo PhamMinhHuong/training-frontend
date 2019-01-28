@@ -141,6 +141,7 @@
     margin-left: 5px;
     font-size: $font-size-sm;
     white-space: nowrap;
+    font-family: 'Open Sans';
   }
 
   &__wrapper {
@@ -166,7 +167,7 @@
     padding-left: 25px;
 
     &::placeholder {
-      color: $gray-light;
+      color: $gray-lighter;
     }
   }
 
@@ -192,7 +193,7 @@
       left: 0;
       width: 1px;
       height: 80%;
-      background: rgba($gray-light, .8);
+      background: rgba($gray-lighter, .8);
     }
   }
 }
@@ -252,7 +253,6 @@
 .nav {
   height: 50px;
   &__item {
-    font-size: $font-size-sm;
     display: flex;
     align-items: center;
     transition: all .3s ease;
@@ -271,6 +271,7 @@
     color: $white;
     padding: 0 15px;
     transition: all .3s ease;
+    font-size: $font-size-sm;
 
     &:hover {
       color: $white;

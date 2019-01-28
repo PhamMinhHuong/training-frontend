@@ -51,7 +51,7 @@
     color: $gray;
     font-size: $font-size-sm;
     text-transform: uppercase;
-    font-weight: $semibold;
+    font-weight: $bold;
   }
 
   &__list {
@@ -100,9 +100,9 @@
     font-size: $font-size-sm;
     color: $gray;
     text-transform: uppercase;
-    font-weight: $semibold;
+    font-weight: $bold;
     word-break: break-word;
-    width: 155px;
+    max-width: 200px;
   }
 
   &__form {
@@ -111,7 +111,7 @@
     align-items: stretch;
     height: 50px;
     width: 100%;
-    padding-left: 50px;
+    padding-left: 65px;
   }
 
   &__input {
@@ -144,7 +144,7 @@
     }
 
     &__text {
-      width: 100%;
+      max-width: 100%;
       color: $green;
       margin-bottom: 10px;
     }
@@ -157,7 +157,7 @@
 
   &__image {
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
     margin: auto;
     margin-bottom: 10px;
   }
@@ -167,7 +167,7 @@
     margin-bottom: 10px;
     line-height: 23px;
     font-size: $font-size-base;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   &__icon {
@@ -202,6 +202,7 @@
 .f-customer {
   display: flex;
   flex-flow: row wrap;
+  padding-left: 15px;
 
   &__block {
     flex: 1;
@@ -210,6 +211,10 @@
       flex: none;
       margin-left: auto;
     }
+  }
+
+  &__item {
+    margin-bottom: 6px;
   }
 
   &__icon {
@@ -222,6 +227,7 @@
     font-size: $font-size-sm;
     font-weight: $bold;
     word-break: break-all;
+    margin-bottom: 25px;
   }
 
   &__btn {
@@ -283,6 +289,7 @@
 
   &__btn {
     padding-left: 5px;
+    padding-right: 5px;
     height: 100%;
     display: flex;
     align-items: center;

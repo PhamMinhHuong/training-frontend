@@ -81,4 +81,9 @@ $(function(){
     $('.product-count__value').text(count);
   })
 
+  // Checkbox
+    $('.login-form__checkbox').click(function(){
+      $(this).toggleClass('active');
+    })
+
 })

@@ -17,25 +17,25 @@ block body
           .product-cart__table.col-12
             table.cart-table
               thead.cart-table__head
-                tr
-                  td Hình ảnh
-                  td Tên sản phẩm
-                  td Đơn giá
-                  td Số lượng
-                  td Thành tiền
-                  td Xóa
+                tr.cart-table__row
+                  td.cart-table__cell Hình ảnh
+                  td.cart-table__cell Tên sản phẩm
+                  td.cart-table__cell Đơn giá
+                  td.cart-table__cell Số lượng
+                  td.cart-table__cell Thành tiền
+                  td.cart-table__cell Xóa
               tbody.cart-table__body.cart-body
                 - for(i = 0; i < 3; i++)
-                  tr
-                    td
+                  tr.cart-table__row
+                    td.cart-table__cell
                       .cart-body__img-wrapper
                         img.img-fluid(src="../images/sp01.png", alt="")
-                    td.cart-body__name Cây văn phòng
-                    td.cart-body__price 270.000 đ
-                    td
+                    td.cart-table__cell.cart-body__name Cây văn phòng
+                    td.cart-table__cell.cart-body__price 270.000 đ
+                    td.cart-table__cell
                       p.cart-body__count 1
-                    td.cart-body__total-price 270.000 đ
-                    td
+                    td.cart-table__cell.cart-body__total-price 270.000 đ
+                    td.cart-table__cell
                       +buttons({
                         iconFont: 'fas fa-trash-alt',
                         iconSize: 'lg',

@@ -5,6 +5,7 @@
 .new {
   display: flex;
   flex-flow: column nowrap;
+  font-family: Roboto, sans-serif;
 
   &__image-wrapper {
     height: 200px;
@@ -21,14 +22,13 @@
   &__date {
     font-style: italic;
     font-size: $font-size-base;
-    font-family: 'Roboto Slab', sans-serif;
-    color: $gray;
+    color: $gray-light;
     margin-bottom: 20px;
   }
 
   &__title {
     color: $green;
-    font-weight: $semibold;
+    font-weight: $bold;
     font-size: $font-size-sm;
     margin-bottom: 15px;
 
@@ -38,7 +38,7 @@
   }
 
   &__description {
-    font-size: $font-size-sm;
+    font-size: $font-size-base-small;
     color: $gray;
     margin-bottom: 20px;
   }

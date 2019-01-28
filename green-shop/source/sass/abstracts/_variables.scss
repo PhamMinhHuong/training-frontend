@@ -6,11 +6,16 @@
 // Modifier variables of Boostrap 4
 // Detail: https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults
 
-$white: #fff;
 $body-color: #f9f9f9;
-$black: #202020;
+$white: #fff;
+$black-lightest: #434343;
+$black-lighter: #363533;
 $black-light: #313131;
-$black-lighter: #434343;
+$black: #202020;
+$gray-lighter: #c2c2c2;
+$gray-light: #959595;
+$gray: #898989;
+$gray-dark: #7d7d7d;
 $green: #3fb871;
 $red: #d64146;
 $orangered: #f76d3c;
@@ -18,18 +23,15 @@ $purple: #913ccd;
 $blue: #5481e6;
 $pink: #f15f74;
 $yellow: #febf01;
-$gray: #898989;
-$gray-dark: #7d7d7d;
-$gray-light: #c2c2c2;
 $delete-text: #959595;
 $border: #e1e1e1;
 
 // Fonts
 $font-family-base: 'Arial', 'sans-serif';
-$font-roboto-slab: 'Roboto Slab', 'serif';
 $font-size-xxs: 9px;
 $font-size-xs: 10px;
 $font-size-base: 12px;
+$font-size-base-small: 13px;
 $font-size-sm: 14px;
 $font-size-md: 15px;
 $font-size-lg: 16px;
