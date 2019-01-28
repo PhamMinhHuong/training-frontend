@@ -49,10 +49,11 @@ p {
 
 .btn-primary {
   text-transform: uppercase;
-  transition: all .3s ease;
+  transition: all .2s ease;
   border-radius: 20px;
   height: 40px;
   max-width: 200px;
+  border: 1px solid transparent;
   display: inline-flex;
   align-items: center;
   padding: 0 15px;
@@ -60,6 +61,10 @@ p {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: $font-size-base;
+
+  &:hover {
+    border: 1px solid transparent;
+  }
 
   &--green {
     background: $green;

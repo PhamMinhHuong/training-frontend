@@ -44,11 +44,11 @@ block body
           .product-cart__actions.cart-actions.col-12
             +buttons-link({
               text: "hủy đơn hàng",
-              btnClass: 'cart-actions__cancel btn-primary--white'
+              btnClass: 'cart-actions__cancel btn-primary btn-primary--white'
             })
             +buttons-link({
               text: "tiếp tục mua",
-              btnClass: 'cart-actions__continue btn-primary--green'
+              btnClass: 'cart-actions__continue btn-primary btn-primary--green'
             })
           .product-cart__vat.col-12.col-md-auto.ml-md-auto
             table.table-vat
@@ -66,7 +66,7 @@ block body
           .product-cart__checkout.col-12
             +buttons({
               text: "thanh toán",
-              btnClass: 'btn-primary--green'
+              btnClass: 'btn-primary btn-primary--green'
             })
   block footer
     include layout/_footer

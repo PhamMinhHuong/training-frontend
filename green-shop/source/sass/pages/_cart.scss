@@ -46,12 +46,19 @@
 }
 
 .cart-body {
+  tr {
+    td {
+      padding: 20px;
+    }
+  }
+
   &__img-wrapper {
     width: 150px;
     height: 150px;
   }
 
   &__name {
+    word-break: break-word;
     color: $green;
     text-transform: uppercase;
     font-size: $font-size-xl;
@@ -83,6 +90,27 @@
     font-size: $icon-size-lg;
     color: $gray;
   }
+
+  @include respond-to(tablet-and-down) {
+    tr {
+      td {
+        padding: 2px;
+      }
+    }
+
+    &__img-wrapper {
+      margin: auto;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+    &__img-wrapper {
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
 
 .cart-actions {
@@ -99,6 +127,11 @@
   border: 1px solid rgba($gray-light, .3);
   margin-bottom: 40px;
 
+  &__total {
+    font-size: $font-size-xl;
+    background: $green;
+  }
+
   tr {
     border: 1px solid rgba($gray-light, .3);
 
@@ -110,14 +143,13 @@
       padding: 30px 82.5px;
     }
   }
-
-  &__total {
-    font-size: $font-size-xl;
-    background: $green;
-  }
 }
 
 .table-vat .table-vat__total td {
   color: $white;
   font-size: $font-size-xl;
+}
+
+.cart-body tr td:first-child {
+  width: 190px;
 }
