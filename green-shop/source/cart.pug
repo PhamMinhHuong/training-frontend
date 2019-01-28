@@ -52,17 +52,17 @@ block body
             })
           .product-cart__vat.col-12.col-md-auto.ml-md-auto
             table.table-vat
-              thead
-                tr
-                  td Tổng tiền ( chưa thuế )
-                  td 270.000 đ
-              tbody
-                tr
-                  td Thuế ( VAT 10% )
-                  td 27.000 đ
-                tr.table-vat__total
-                  td Tổng phải thanh toán
-                  td 297.000 đ
+              tfoot.table-vat__foot
+                tr.table-vat__total.table-vat__row
+                  td.table-vat__cell Tổng phải thanh toán
+                  td.table-vat__cell 297.000 đ
+              tbody.table-vat__body
+                tr.table-vat__row
+                  td.table-vat__cell Tổng tiền ( chưa thuế )
+                  td.table-vat__cell 270.000 đ
+                tr.table-vat__row
+                  td.table-vat__cell Thuế ( VAT 10% )
+                  td.table-vat__cell 27.000 đ
           .product-cart__checkout.col-12
             +buttons({
               text: "thanh toán",
