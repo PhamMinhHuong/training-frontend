@@ -49,17 +49,19 @@ block body
                 iconClass: 'product__icon',
                 iconFont: 'fas fa-search',
                 iconSize: 'md',
-                iconColor: 'black'
+                iconColor: 'black-lighter'
               })
               +buttons({
                 btnClass: 'product__like',
                 iconClass: 'product__icon',
                 iconFont: 'fas fa-heart',
                 iconSize: 'md',
-                iconColor: 'black'
+                iconColor: 'black-lighter'
               })
             .product-info__social
               .fb-like(data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false")
+              a.twitter-share-button(href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="small") Tweet
+              g:plusone(size="tall")
           .product-detail__tab-info.product-tab.col-12
             .nav.nav-tabs(role="tablist")
               .nav-item.nav-link.product-tab__item.active(href="#tab1" data-toggle="tab" role="tab") Thông tin sản phẩm

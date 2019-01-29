@@ -22,6 +22,8 @@
     display: flex;
     align-items: center;
     transition: all .3s ease;
+    font-size: $font-size-base;
+    font-family: Roboto;
 
     &:hover {
       text-decoration: none;
@@ -45,6 +47,66 @@
       color: $green;
     }
   }
+
+  &--image {
+    .sidebar-list__item {
+      border-bottom: 0;
+
+      .sidebar-list__link {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+      }
+    }
+
+    .sidebar-list__text {
+      word-break: break-word;
+      font-size: $font-size-base;
+      font-family: Roboto;
+      flex: 1;
+    }
+
+    .sidebar-list__image-wrapper {
+      margin-right: 10px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--tag {
+    display: flex;
+    flex-flow: row wrap;
+
+    .sidebar-list__item {
+      max-width: 100%;
+      border-bottom: 0;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border: 1px solid rgba($gray, .3);
+
+      .sidebar-list__link {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        padding: 10px 20px;
+        transition: all .2s ease;
+        font-size: $font-size-base;
+        font-family: Roboto;
+
+        &.active {
+          color: $white;
+          background: $green;
+        }
+
+        &:hover {
+          color: $white;
+          background: $green;
+        }
+      }
+    }
+  }
 }
 
 .color-list {
@@ -63,6 +125,8 @@
   &__text {
     color: $gray;
     transition: all .3s ease;
+    font-size: $font-size-base;
+    font-family: Roboto;
   }
 
   &__color {
@@ -98,61 +162,5 @@
 
   .color-list__text {
     color: $green;
-  }
-}
-
-.sidebar-list--image {
-  .sidebar-list__item {
-    border-bottom: 0;
-
-    .sidebar-list__link {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: flex-start;
-    }
-  }
-
-  .sidebar-list__text {
-    word-break: break-word;
-    flex: 1;
-  }
-
-  .sidebar-list__image-wrapper {
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.sidebar-list--tag {
-  display: flex;
-  flex-flow: row wrap;
-
-  .sidebar-list__item {
-    max-width: 100%;
-    border-bottom: 0;
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border: 1px solid rgba($gray, .3);
-
-    .sidebar-list__link {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      display: block;
-      padding: 10px 20px;
-      transition: all .2s ease;
-
-      &.active {
-        color: $white;
-        background: $green;
-      }
-
-      &:hover {
-        color: $white;
-        background: $green;
-      }
-    }
   }
 }

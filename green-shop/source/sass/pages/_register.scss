@@ -4,8 +4,42 @@
 
 .register {
   @extend %wrapper;
+
+  margin-bottom: 80px;
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    padding: 0 20px;
+  }
+
+  &__btn {
+    padding: 0 35px;
+
+    &--signup {
+      margin-left: 18px;
+    }
+  }
+
+  &__checkbox-label {
+    margin-bottom: 40px;
+  }
+
+  &__label {
+    font-size: $font-size-base;
+    color: $gray;
+    margin-bottom: 10px;
+
+    &:after {
+      content: ' *';
+      color: $red;
+    }
+  }
 }
 
 .register .form-row .register__form-group {
-  padding: 0 15px;
+  padding: 0 20px;
+  margin-bottom: 30px;
 }

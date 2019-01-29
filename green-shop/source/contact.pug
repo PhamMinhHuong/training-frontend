@@ -17,21 +17,21 @@ block body
         img.img-fluid(src="../images/map.png", alt="")
       .contact
         .contact__wrapper.row
-          h3.title.title--normal.col-12 Thông tin liên hệ
           .col-12.col-md-6
-            form
-              .form-group.login-form__group
-                label.login-form__label(for="contact-name") Họ và tên
-                input.form-control.login-form__input#contact-email(type="text")
-              .form-group.login-form__group
-                label.login-form__label(for="contact-email") Địa chỉ email
+            h3.title.title--normal Thông tin liên hệ
+            form.contact-form
+              .form-group.contact-form__group
+                label.contact-form__label(for="contact-name") Họ và tên
+                input.form-control.contact-form__input#contact-email(type="text")
+              .form-group.contact-form__group
+                label.contact-form__label(for="contact-email") Địa chỉ email
                 input.form-control.login-form__input#contact-email(type="password")
               .form-group.login-form__group
-                label.login-form__label(for="contact-phone") Số ĐT
+                label.contact-form__label(for="contact-phone") Số ĐT
                 input.form-control.login-form__input#contact-phone(type="text")
               .form-group.login-form__group
-                label.login-form__label(for="contact-comment") Bình luận
-                textarea.form-control.login-form__input#contact-comment(type="password")
+                label.contact-form__label(for="contact-comment") Bình luận
+                textarea.form-control.contact-form__textarea#contact-comment(type="password")
 
           .col-12.col-md-6
             a.f-info__image-wrapper(href="#")

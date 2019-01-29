@@ -76,7 +76,7 @@
 
   &__info {
     text-align: center;
-    padding: 20px 0;
+    padding: 18px 0 20px 0;
   }
 
   &__stars {
@@ -130,9 +130,8 @@
     transition: all .15s ease;
     padding: 0 20px;
     &:hover {
-      background: transparent;
-      border: 1px solid $green;
       color: $green;
+      border: 1px solid $white;
     }
   }
 
@@ -223,6 +222,7 @@
   padding: 20px;
   flex-flow: row nowrap;
   min-width: 100px;
+  margin-top: -1px;
 
   .product__image-wrapper {
     width: 80px;

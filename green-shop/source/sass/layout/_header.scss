@@ -136,6 +136,11 @@
     padding-left: 25px;
   }
 
+  &__contact-image {
+    width: 12px;
+    height: 12px;
+  }
+
   &__phone {
     color: $gray-dark;
     margin-left: 5px;
@@ -152,7 +157,6 @@
     display: flex;
     flex-flow: row nowrap;
     background: $white;
-    border: 1px solid rgba($black, .5);
 
     @include respond-to(tablet-and-down) {
       width: auto;
@@ -193,7 +197,7 @@
       left: 0;
       width: 1px;
       height: 80%;
-      background: rgba($gray-lighter, .8);
+      background: rgba($gray-lighter, .5);
     }
   }
 }

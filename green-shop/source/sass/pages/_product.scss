@@ -126,6 +126,8 @@
   .page-link {
     color: $gray;
     margin: 0 5px;
+    font-size: $font-size-base;
+    font-family: Roboto;
 
     &.active {
       background: $green;

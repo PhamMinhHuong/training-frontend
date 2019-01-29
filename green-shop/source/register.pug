@@ -17,34 +17,35 @@ block body
           form.register__form
             .form-row.register__form-row
               .form-group.register__form-group.col-12.col-md-6
-                label(for="register-name") Họ và tên
+                label.register__label(for="register-name") Họ và tên
                 input.form-control.register__input#register-name(type="text")
               .form-group.register__form-group.col-12.col-md-6
-                label(for="register-phone") Số điện thoại
+                label.register__label(for="register-phone") Số điện thoại
                 input.form-control.register__input#register-phone(type="text")
               .form-group.register__form-group.col-12.col-md-6
-                label(for="register-email") Địa chỉ email
+                label.register__label(for="register-email") Địa chỉ email
                 input.form-control.register__input#register-name(type="email")
               .form-group.register__form-group.col-12.col-md-6
-                label(for="register-website") Website của bạn
+                label.register__label(for="register-website") Website của bạn
                 input.form-control.register__input#register-website(type="text")
-              .login-form__group.col-12
+              .form-group.register__form-group.col-12
                 input.login-form__checkbox#login-checker(type="checkbox")
-                label.login-form__checkbox-label(for="login-checker") Ghi nhớ tài khoản
-              h3.title.title--normal.col-12 Thông tin tài khoản
+                label.register__label.login-form__checkbox-label.register__checkbox-label(for="login-checker") Đăng ký nhân thông tin qua email
+              h3.title.title--normal.register__title Thông tin tài khoản
               .form-group.register__form-group.col-12.col-md-6
-                label(for="register-password") Mật khẩu
+                label.register__label(for="register-password") Mật khẩu
                 input.form-control.register__input#register-password(type="text")
               .form-group.register__form-group.col-12.col-md-6
-                label(for="register-repassword") Nhập lại mật khẩu
+                label.register__label(for="register-repassword") Nhập lại mật khẩu
                 input.form-control.register__input#register-repassword(type="text")
-              +buttons-link({
-                text: "Quay lại",
-                btnClass: 'login-letter__btn btn-primary btn-primary--white'
-              })
-              +buttons-link({
-                text: "Đăng ký",
-                btnClass: 'login-letter__btn btn-primary btn-primary--green'
-              })
+              .form-group.register__form-group.col-12
+                +buttons-link({
+                  text: "Quay lại",
+                  btnClass: 'register__btn btn-primary btn-primary--white'
+                })
+                +buttons-link({
+                  text: "Đăng ký",
+                  btnClass: 'register__btn register__btn--signup btn-primary btn-primary--green'
+                })
   block footer
     include layout/_footer

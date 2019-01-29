@@ -28,7 +28,7 @@ block body
                 i.far.fa-comment-dots.post-item__icon
                 | 0 Bình luận
             .new-detail__image-wrapper
-              img.post-item__image(src="../images/new05.png")  
+              img.post-item__image.img-fluid(src="../images/new05.png")  
             p.new-detail__text
               | Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khzi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!
               br
@@ -56,16 +56,48 @@ block body
               br  
               | Tùy thuộc vào sở thích cá nhân và thiết kế chủ đạo của không gian phòng làm việc, bạn có thể chọn loại trầu bà đế vương xanh, trầu bá đế vương vàng hoặc trầu bà đế vương đỏ.
             .new-detail__image-wrapper
-              img.post-item__image(src="../images/new04.png")
+              img.post-item__image.img-fluid(src="../images/new04.png")
             p.new-detail__text
               | Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khzi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!
               br
               br
               | 7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng, Những mẫu cây để bàn đang được giới văn phòng ưa chuộng, cây cảnh văn phòng để bàn thông dụng, những cây cảnh được giới văn phòng ưa chuộng
           .new-detail__comment-display.new-comment
-            h3.title--normal Bình luận (3)
+            h3.title.title--normal Bình luận (3)
             .new-comment
-              
-          .new-detail__comment-compose
+              +comments({
+                avatar: 'avatar.png',
+                name: 'Nguyễn Văn An',
+                comment: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
+                custom : 'parent'
+              })
+              +comments({
+                avatar: 'avatar.png',
+                name: 'Nguyễn Văn Bình',
+                comment: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
+                custom: 'children'
+              })
+              +comments({
+                avatar: 'avatar.png',
+                name: 'Nguyễn Văn Chiến',
+                comment: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
+              })
+          .new-detail__comment-compose.compose
+            h3.title.title--normal Viết Bình Luận :
+            form.compose__form
+              .form-row.compose__row
+                .form-group.compose__form-group.col-12.col-md-4
+                  input.compose__input.form-control(placeholder="Họ và tên:")
+                .form-group.compose__form-group.col-12.col-md-4
+                  input.compose__input.form-control(placeholder="Email:")
+                .form-group.compose__form-group.col-12.col-md-4
+                  input.compose__input.form-control(placeholder="Phone")
+                .form-group.compose__form-group.col-12
+                  textarea.compose__textarea.form-control(placeholder="Bình luận")
+                .col-auto.ml-auto
+                  +buttons-link({
+                    text: "Gửi",
+                    btnClass: 'compose__btn btn-primary btn-primary--green'
+                  })
   block footer
     include layout/_footer

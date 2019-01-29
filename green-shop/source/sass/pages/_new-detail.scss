@@ -5,6 +5,10 @@
 .new-detail {
   @extend %wrapper;
 
+  &__article {
+    margin-bottom: 12vh;
+  }
+
   &__sidebar-left {
     .title {
       margin-bottom: 20px;
@@ -62,5 +66,74 @@
   &__comment {
     margin-right: 15px;
     font-size: $font-size-sm;
+  }
+
+  &__comment-compose {
+    margin-bottom: 40px;
+
+    .title {
+      color: $gray;
+    }
+  }
+
+  @include respond-to(smallphone-and-down) {
+    &__date {
+      margin-right: 10px;
+      font-size: $font-size-base;
+    }
+
+    &__time {
+      margin-right: 10px;
+      font-size: $font-size-base;
+    }
+
+    &__comment {
+      margin-right: 10px;
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.new-comment {
+  margin-bottom: 40px;
+
+  .title {
+    color: $gray;
+  }
+}
+
+.compose {
+  margin-bottom: 60px;
+
+  &__input {
+    height: 46px;
+    border: 1px solid $gray-lighter;
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      font-size: $font-size-base;
+      color: $black-lighter;
+    }
+  }
+
+  &__textarea {
+    border: 1px solid $gray-lighter;
+    background: transparent;
+    border-radius: 0;
+    min-height: 150px;
+    max-height: 250px;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      font-size: $font-size-base;
+      color: $black-lighter;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    padding: 0 50px;
   }
 }

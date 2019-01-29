@@ -1,0 +1,9 @@
+mixin comments({avatar, name, comment, custom})
+  .comment(class= custom ? `comment--${custom}` : null)
+    .comment__avatar-wrapper
+      img.comment__avatar.img-fluid(src=`../images/${avatar}`, alt="")
+    .comment__content
+      p.comment__user #{name}
+      p.comment__text #{comment}
+      p.comment__date Thứ 7, 26/12/2015 12: 00 AM
+      p.comment__reply Trả lời

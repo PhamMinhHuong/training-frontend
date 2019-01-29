@@ -10,21 +10,21 @@ mixin products({image, name, href, oldPrice, newPrice, description, sale, isNew,
         .product__actions
           +buttons({
             text: "MUA NGAY",
-            btnClass: 'product__buy btn-primary--green'
+            btnClass: 'product__buy btn-primary btn-primary--green'
           })
           +buttons-link({
             btnClass: 'product__search',
             iconClass: 'product__icon',
             iconFont: 'fas fa-search',
             iconSize: 'md',
-            iconColor: 'black'
+            iconColor: 'black-lighter'
           })
           +buttons({
             btnClass: 'product__like',
             iconClass: 'product__icon',
             iconFont: 'fas fa-heart',
             iconSize: 'md',
-            iconColor: 'black'
+            iconColor: 'black-lighter'
           })
       if (sale !== '' && sale !== undefined)
         p.product__status.product__status--sale -#{sale}%

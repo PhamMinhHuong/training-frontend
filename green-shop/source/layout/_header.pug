@@ -65,10 +65,9 @@ header.header
           img.logo__image(src="../images/logo.png", alt="Logo")
       form.header-middle__search.search.ml-auto.d-none.d-md-flex
         .search__contact
-          +icons({
-            iconFont: 'fas fa-phone',
-            iconSize: 'sm',
-            iconColor: 'gray-dark'})
+          +icon-images({
+            iconImage: 'call.png',
+            imageClass: 'search__contact-image'})
           p.search__phone HỖ TRỢ : (04) 6674 2332 - (04) 3786 8904
         .search__wrapper
           input.search__input(placeholder="Tìm kiếm...")
