@@ -16,7 +16,7 @@
   }
 
   &__name {
-    color: $black;
+    color: $text-dark;
     font-size: $font-size-xl;
     margin-bottom: 10px;
     display: block;
@@ -56,16 +56,19 @@
   &__date {
     margin-right: 15px;
     font-size: $font-size-sm;
+    color: $text-light;
   }
 
   &__time {
     margin-right: 15px;
     font-size: $font-size-sm;
+    color: $text-light;
   }
 
   &__comment {
     margin-right: 15px;
     font-size: $font-size-sm;
+    color: $text-light;
   }
 
   &__comment-compose {

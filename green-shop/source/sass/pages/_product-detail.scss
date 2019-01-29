@@ -15,6 +15,18 @@
 
   &__category {
     margin-bottom: 70px;
+
+    .title {
+      margin-bottom: 50px;
+    }
+
+    .product__slider .slick-prev {
+      top: -66px;
+    }
+
+    .product__slider .slick-next {
+      top: -66px;
+    }
   }
 
   &__tab-info {
@@ -22,7 +34,7 @@
   }
 
   .nav {
-    height: auto;
+    height: 40px;
   }
 
   @include respond-to(tablet-and-down) {
@@ -150,11 +162,11 @@
   }
 
   &__value {
-    margin: 0 5px;
+    margin: 0 6px;
     border-radius: 0;
     border: 1px solid rgba($gray, .3);
-    width: 75px;
-    height: 45px;
+    width: 74px;
+    height: 43px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,7 +180,7 @@
     border-radius: 0;
     border: 1px solid rgba($gray, .3);
     width: 45px;
-    height: 45px;
+    height: 43px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +194,12 @@
   &__content {
     border: 1px solid rgba($gray, .3);
     border-top: 0;
-    padding: 45px;
+    padding: 43px;
+  }
+
+  &__text {
+    color: $gray-dark;
+    font-size: $font-size-base;
   }
 
   &__item {

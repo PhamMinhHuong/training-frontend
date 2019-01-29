@@ -21,16 +21,16 @@
 
 .cart-table {
   width: 100%;
-  border: 1px solid rgba($gray-light, .3);
+  border: 1px solid rgba($gray-light, .2);
   margin-bottom: 45px;
   border-collapse: collapse;
 
   &__row {
-    border: 1px solid rgba($gray-light, .3);
+    border: 1px solid rgba($gray-light, .2);
   }
 
   &__cell {
-    border: 1px solid rgba($gray-light, .3);
+    border: 1px solid rgba($gray-light, .2);
 
     &:first-child {
       width: 190px;
@@ -262,6 +262,10 @@
     color: $green;
     font-weight: $bold;
     padding: 0 82.5px;
+
+    &:first-child {
+      text-transform: uppercase;
+    }
   }
 
   &__total {

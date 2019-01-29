@@ -9,8 +9,12 @@
   &__copyright {
     padding: 15px 0;
     font-size: $font-size-sm;
-    color: $gray-light;
+    color: $white;
     background: $black-lighter;
+  }
+
+  @include respond-to(desktop-and-down) {
+    padding: 0 15px;
   }
 }
 
@@ -109,7 +113,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
-    height: 50px;
+    height: 46px;
     width: 100%;
     padding-left: 65px;
   }
@@ -119,6 +123,7 @@
     border: none;
     outline: none;
     padding-left: 30px;
+    height: 46px;
   }
 
   &__btn {
@@ -126,7 +131,7 @@
     align-items: center;
     justify-content: center;
     width: 50px;
-    height: 50px;
+    height: 46px;
     background: $green;
     border-radius: 0;
   }
@@ -154,7 +159,6 @@
 .f-info {
   display: flex;
   flex-flow: column nowrap;
-
   &__image {
     width: 100%;
     max-width: 300px;
@@ -163,6 +167,7 @@
   }
 
   &__text {
+    padding-right: 50px;
     color: $gray-light;
     margin-bottom: 10px;
     line-height: 23px;
@@ -189,6 +194,9 @@
     margin-bottom: 30px;
     text-align: center;
 
+    &__text {
+      padding-right: 0;
+    }
     &__image {
       margin-bottom: 30px;
     }
@@ -276,6 +284,7 @@
     height: 100%;
     color: $gray-light;
     font-size: $font-size-base;
+    padding-left: 0;
 
     &:hover {
       color: $green;

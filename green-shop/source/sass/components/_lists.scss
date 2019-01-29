@@ -1,5 +1,5 @@
 .sidebar-list {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   &--default {
     width: 100%;
   }
@@ -96,12 +96,12 @@
         font-family: Roboto;
 
         &.active {
-          color: $white;
+          color: $tag;
           background: $green;
         }
 
         &:hover {
-          color: $white;
+          color: $tag;
           background: $green;
         }
       }

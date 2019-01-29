@@ -66,7 +66,6 @@
     transition: all .3s ease;
     display: inline-block;
     word-break: break-all;
-    padding: 0 5px;
 
     &:hover {
       color: $green;
@@ -121,8 +120,8 @@
   &__buy {
     font-size: $font-size-sm;
     color: $white;
-    height: 40px;
-    border-radius: 20px;
+    height: 44px;
+    border-radius: 22px;
     background: $green;
     display: flex;
     align-items: center;
@@ -136,10 +135,10 @@
   }
 
   &__search {
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
+    margin-left: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
     background: $white;
     display: flex;
     align-items: center;
