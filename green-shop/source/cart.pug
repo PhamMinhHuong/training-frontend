@@ -1,7 +1,7 @@
 extends layout/_default
 
 block head
-  +head('Green Shop | Giỏ hàng')
+  +head("Green Shop | Giỏ hàng")
 
 block body
   block header
@@ -11,8 +11,8 @@ block body
       .product-cart
         .product-cart__wrapper.row
           +breadcrumb(
-          ['Home', 'Giỏ hàng'],
-          ['home', 'cart'])
+          ["Home", "Giỏ hàng"],
+          ["home", "cart"])
           h3.title.title--normal.col-12 Giỏ hàng
           .product-cart__table.col-12
             table.cart-table
@@ -30,30 +30,31 @@ block body
                     td.cart-table__cell
                       .cart-body__img-wrapper
                         img.img-fluid(src="../images/sp01.png", alt="")
-                    td.cart-table__cell.cart-body__name Cây văn phòng
-                    td.cart-table__cell.cart-body__price 270.000 đ
+                    td.cart-table__cell.cart-body__item-name Cây văn phòng
+                    td.cart-table__cell.cart-body__item-price 270.000 đ
                     td.cart-table__cell
-                      p.cart-body__count 1
+                      p.cart-body__item-count 1
                     td.cart-table__cell.cart-body__total-price 270.000 đ
                     td.cart-table__cell
                       +buttons({
-                        iconFont: 'fas fa-trash-alt',
-                        iconSize: 'lg',
-                        iconColor: 'gray'
+                        iconFont: "fas fa-trash-alt",
+                        iconSize: "lg",
+                        iconColor: "gray",
+                        iconClass: 'cart-body__item-delete'
                       })
           .product-cart__actions.cart-actions.col-12
             +buttons-link({
               text: "hủy đơn hàng",
-              btnClass: 'cart-actions__cancel btn-primary btn-primary--white'
+              btnClass: "cart-actions__cancel btn-primary btn-primary--white"
             })
             +buttons-link({
               text: "tiếp tục mua",
-              btnClass: 'cart-actions__continue btn-primary btn-primary--green'
+              btnClass: "cart-actions__continue btn-primary btn-primary--green"
             })
           .product-cart__vat.col-12.col-md-auto.ml-md-auto
             table.table-vat
               tfoot.table-vat__foot
-                tr.table-vat__total.table-vat__row
+                tr.table-vat__row.table-vat__row--green
                   td.table-vat__cell Tổng phải thanh toán
                   td.table-vat__cell 297.000 đ
               tbody.table-vat__body
@@ -66,7 +67,7 @@ block body
           .product-cart__checkout.col-12
             +buttons({
               text: "thanh toán",
-              btnClass: 'btn-primary btn-primary--green'
+              btnClass: "btn-primary btn-primary--green"
             })
   block footer
     include layout/_footer

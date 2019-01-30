@@ -1,7 +1,7 @@
 extends layout/_default
 
 block head
-  +head('Green Shop | Đăng ký')
+  +head("Green Shop | Đăng ký")
 
 block body
   block header
@@ -11,8 +11,8 @@ block body
       .register
         .register__wrapper.row
           +breadcrumb(
-          ['Home', 'Đăng ký'],
-          ['home', 'register'])
+          ["Home", "Đăng ký"],
+          ["home", "register"])
           h3.title.title--normal.col-12 Thông tin cá nhân
           form.register__form
             .form-row.register__form-row
@@ -41,11 +41,11 @@ block body
               .form-group.register__form-group.col-12
                 +buttons-link({
                   text: "Quay lại",
-                  btnClass: 'register__btn btn-primary btn-primary--white'
+                  btnClass: "register__btn btn-primary btn-primary--white"
                 })
                 +buttons-link({
                   text: "Đăng ký",
-                  btnClass: 'register__btn register__btn--signup btn-primary btn-primary--green'
+                  btnClass: "register__btn register__btn--signup btn-primary btn-primary--green"
                 })
   block footer
     include layout/_footer

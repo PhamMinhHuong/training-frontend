@@ -1,7 +1,7 @@
 extends layout/_default
 
 block head
-  +head('Green Shop | Tin tức')
+  +head("Green Shop | Tin tức")
 
 block body
   block header
@@ -10,8 +10,8 @@ block body
     .main.new-detail
       .new-detail__wrapper.row
         +breadcrumb(
-        ['Home', 'Cây dạ lam'],
-        ['home', 'new'])
+        ["Home", "Cây dạ lam"],
+        ["home", "new"])
         .new-detail__sidebar-left.col-12.col-md-3
           include layout/_new-sidebar
         .new-detail__content.col-12.col-md-9
@@ -66,20 +66,20 @@ block body
             h3.title.title--normal Bình luận (3)
             .new-comment
               +comments({
-                avatar: 'avatar.png',
-                name: 'Nguyễn Văn An',
+                avatar: "avatar.png",
+                name: "Nguyễn Văn An",
                 comment: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
-                custom : 'parent'
+                custom : "parent"
               })
               +comments({
-                avatar: 'avatar.png',
-                name: 'Nguyễn Văn Bình',
+                avatar: "avatar.png",
+                name: "Nguyễn Văn Bình",
                 comment: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.",
-                custom: 'children'
+                custom: "children"
               })
               +comments({
-                avatar: 'avatar.png',
-                name: 'Nguyễn Văn Chiến',
+                avatar: "avatar.png",
+                name: "Nguyễn Văn Chiến",
                 comment: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit."
               })
           .new-detail__comment-compose.compose
@@ -97,7 +97,7 @@ block body
                 .col-auto.ml-auto
                   +buttons-link({
                     text: "Gửi",
-                    btnClass: 'compose__btn btn-primary btn-primary--green'
+                    btnClass: "compose__btn btn-primary btn-primary--green"
                   })
   block footer
     include layout/_footer

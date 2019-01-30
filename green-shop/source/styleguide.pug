@@ -3,8 +3,8 @@
 extends layout/_page-no-header
 
 block head
-  +head('Style Guide')
-  style(type='text/css').
+  +head("Style Guide")
+  style(type="text/css").
     body {
       background-color: #fff;
     }
@@ -36,8 +36,8 @@ block main
 
     -
       var components = [
-        { key: 'colors', value: 'Colors' },
-        { key: 'buttons', value: 'Buttons' }
+        { key: "colors", value: "Colors" },
+        { key: "buttons", value: "Buttons" }
       ];
 
     .row
@@ -52,7 +52,7 @@ block main
               id=`v-pills-${val.key}-tab`
               href=`#v-pills-${val.key}`
               aria-controls=`v-pills-${val.key}`
-              class=findFirstItem ? 'list-group-item active' : 'list-group-item'
+              class=findFirstItem ? "list-group-item active" : "list-group-item"
             )= val.value
       .col-10
         #v-pills-tabContent.tab-content
@@ -62,12 +62,12 @@ block main
               role="tabpanel"
               id=`v-pills-${val.key}`
               aria-labelledby=`v-pills-${val.key}-tab`
-              class=findFirstItem ? 'tab-pane fade show active' : 'tab-pane fade'
+              class=findFirstItem ? "tab-pane fade show active" : "tab-pane fade"
             )
               case val.key
-                when 'colors'
+                when "colors"
                   include styleguides/_colors
-                when 'buttons'
+                when "buttons"
                   include styleguides/_buttons
                 default
-                  - throw new Error('"val.key" must be in "components" variable')
+                  - throw new Error(""val.key" must be in "components" variable")

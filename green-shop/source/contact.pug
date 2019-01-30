@@ -1,7 +1,7 @@
 extends layout/_default
 
 block head
-  +head('Green Shop | Liên hệ')
+  +head("Green Shop | Liên hệ")
 
 block body
   block header
@@ -11,8 +11,8 @@ block body
       .contact
         .contact__wrapper.row
           +breadcrumb(
-          ['Home', 'Liên hệ'],
-          ['home', 'register'])
+          ["Home", "Liên hệ"],
+          ["home", "register"])
       .contact-map
         img.img-fluid(src="../images/map.png", alt="")
       .contact
@@ -40,17 +40,17 @@ block body
             ul.f-info__contact
               li.f-info__item
                 +icons({
-                  iconClass: 'f-info__icon',
-                  iconFont: 'fas fa-mobile-alt',
-                  iconSize: 'sm',
-                  iconColor: 'green'})
+                  iconClass: "f-info__icon",
+                  iconFont: "fas fa-mobile-alt",
+                  iconSize: "sm",
+                  iconColor: "green"})
                 p Điện thoại : (84-4) 66.558.868
               li.f-info__item
                 +icons({
-                  iconClass: 'f-info__icon',
-                  iconFont: 'fas fa-envelope',
-                  iconSize: 'sm',
-                  iconColor: 'green'})
+                  iconClass: "f-info__icon",
+                  iconFont: "fas fa-envelope",
+                  iconSize: "sm",
+                  iconColor: "green"})
                 p Email : info@dkt.com.vn
   block footer
     include layout/_footer
