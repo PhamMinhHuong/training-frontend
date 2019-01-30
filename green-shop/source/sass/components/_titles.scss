@@ -4,6 +4,7 @@
   overflow: hidden;
   width: 100%;
   text-overflow: ellipsis;
+
   &:after {
     @include pseudo;
 
@@ -23,7 +24,8 @@
     padding-bottom: 14px;
     font-size: $font-size-lg;
     font-weight: $bold;
-    font-family: 'Roboto Slab';
+    font-family: $font-family-third;
+
     &:before {
       @include pseudo;
 

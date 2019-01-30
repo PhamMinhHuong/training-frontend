@@ -23,10 +23,87 @@
   &__textarea {
     min-height: 230px;
     max-height: 300px;
+    border: 1px solid rgba($gray, .3);
+    border-radius: 0;
+  }
+
+  &__input {
+    border-radius: 0;
+    border: 1px solid rgba($gray, .3);
+  }
+
+  &__group {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    margin-left: 25px;
+    font-style: italic;
+    font-size: $font-size-base;
+    font-family: $font-family-second;
+    text-decoration: underline;
+    color: $gray;
+
+    &:hover {
+      color: $green;
+    }
   }
 }
 
 .contact-map {
   width: 100%;
   margin-bottom: 65px;
+}
+
+.contact-info {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__image {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    padding-right: 50px;
+    color: $gray;
+    margin-bottom: 10px;
+    line-height: 23px;
+    font-size: $font-size-base;
+    word-break: break-word;
+  }
+
+  &__icon {
+    font-size: $font-size-xs;
+    color: $green;
+    margin-right: 5px;
+  }
+
+  &__item {
+    color: $gray-light;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    word-break: break-all;
+  }
+
+  @include respond-to(tablet-and-down) {
+    margin-bottom: 30px;
+    text-align: center;
+
+    &__text {
+      padding-right: 0;
+    }
+
+    &__image {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      justify-content: center;
+    }
+  }
 }

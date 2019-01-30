@@ -1,11 +1,11 @@
 mixin breadcrumb(names, hrefs)
-  ol.breadcrumb
+  ol.breadcrumb.breadcrumb-nav
     each name, index in names
       if (index == names.length - 1)
         
-        li.breadcrumb-item.breadcrumb__item.active #{name}
+        li.breadcrumb-item.breadcrumb-nav__item.active #{name}
       
       else
         
-        li.breadcrumb-item.breadcrumb__item
-          a.breadcrumb__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : '#') #{name} 
+        li.breadcrumb-item.breadcrumb-nav__item
+          a.breadcrumb-nav__link(href= `${hrefs[index]}.html` ? `${hrefs[index]}.html` : "#") #{name} 

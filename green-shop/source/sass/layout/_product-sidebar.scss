@@ -2,14 +2,16 @@
 // Layout :: Prodct Side Bar
 // ======================================================
 
-.product-list__sidebar {
-  width: 100%;
+.product-list {
+  .product-list__sidebar {
+    width: 100%;
 
-  .title {
-    margin-bottom: 20px;
-  }
+    .title {
+      margin-bottom: 20px;
+    }
 
-  &__color-list {
-    display: grid;
+    &__color-list {
+      display: grid;
+    }
   }
 }

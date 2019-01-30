@@ -47,7 +47,7 @@
   }
 }
 
-.f-social {
+.footer-social-icon {
   display: flex;
   flex-flow: column nowrap;
 
@@ -80,6 +80,7 @@
 
   &__icon {
     transition: all .3s ease;
+
     &:hover {
       color: $green;
     }
@@ -95,7 +96,7 @@
   }
 }
 
-.f-email {
+.footer-email {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
@@ -156,9 +157,10 @@
   }
 }
 
-.f-info {
+.footer-info {
   display: flex;
   flex-flow: column nowrap;
+
   &__image {
     width: 100%;
     max-width: 300px;
@@ -197,6 +199,7 @@
     &__text {
       padding-right: 0;
     }
+
     &__image {
       margin-bottom: 30px;
     }
@@ -207,7 +210,7 @@
   }
 }
 
-.f-customer {
+.footer-customer {
   display: flex;
   flex-flow: row wrap;
   padding-left: 15px;
@@ -273,7 +276,7 @@
   }
 }
 
-.f-question {
+.footer-question {
   height: 66px;
   display: flex;
   flex-flow: row nowrap;
@@ -292,7 +295,7 @@
   }
 }
 
-.f-bank {
+.footer-bank {
   display: flex;
   flex-flow: row nowrap;
 

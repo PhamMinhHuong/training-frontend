@@ -33,7 +33,7 @@
     font-style: italic;
     color: $gray;
     font-size: $font-size-base;
-    font-family: Roboto;
+    font-family: $font-family-second;
   }
 
   &__reply {
@@ -44,7 +44,7 @@
     text-decoration: underline;
     color: $black-lighter;
     font-style: italic;
-    font-family: Roboto;
+    font-family: $font-family-second;
     cursor: pointer;
   }
 

@@ -2,8 +2,8 @@ $(function(){
 
   // Toggle Header Menu
 
-  $('.menu, .menu__overlay').click(function(){
-    $('.menu__overlay, .menu__content').toggleClass('active');
+  $('.navbar__menu, .navbar__menu-overlay').click(function(){
+    $('.navbar__menu-overlay, .navbar__menu-left').toggleClass('active');
   });
 
   // Toggle Header Expand Search
@@ -83,6 +83,10 @@ $(function(){
 
   // Checkbox
     $('.login-form__checkbox').click(function(){
+      $(this).toggleClass('active');
+    })
+
+    $('.register__checkbox').click(function(){
       $(this).toggleClass('active');
     })
 

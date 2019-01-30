@@ -5,7 +5,7 @@
 .new {
   display: flex;
   flex-flow: column nowrap;
-  font-family: Roboto, sans-serif;
+  font-family: $font-family-second;
 
   &__image-wrapper {
     height: 200px;

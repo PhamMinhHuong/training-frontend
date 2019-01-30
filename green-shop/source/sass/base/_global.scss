@@ -34,9 +34,11 @@ p {
   width: 100%;
 }
 
-.btn:focus {
-  outline: none;
-  box-shadow: none;
+.btn {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 .img-fluid {

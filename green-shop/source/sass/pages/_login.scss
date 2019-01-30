@@ -11,6 +11,10 @@
   .title {
     margin-bottom: 50px;
   }
+
+  .login-letter__title {
+    margin-bottom: 20px;
+  }
 }
 
 .login-form {
@@ -33,7 +37,7 @@
     margin-left: 25px;
     font-style: italic;
     font-size: $font-size-base;
-    font-family: Roboto;
+    font-family: $font-family-second;
     text-decoration: underline;
     color: $gray;
 
@@ -44,7 +48,7 @@
 
   &__checkbox-label {
     font-size: $font-size-base;
-    font-family: Roboto;
+    font-family: $font-family-second;
   }
 
   &__checkbox {
@@ -78,6 +82,10 @@
       transform: rotate(45deg);
     }
 
+    &.active:before {
+      opacity: 1;
+    }
+
     &:focus {
       outline: 0;
       border: 0;
@@ -89,21 +97,12 @@
   }
 }
 
-.login-form__checkbox.active {
-  &:before {
-    opacity: 1;
-  }
-}
 
 .login-letter {
   &__text {
     color: $gray;
-    font-family: Roboto;
+    font-family: $font-family-second;
     font-size: $font-size-base;
     margin-bottom: 36px;
   }
-}
-
-.login .login-letter__title {
-  margin-bottom: 20px;
 }

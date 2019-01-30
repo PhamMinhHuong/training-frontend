@@ -1,15 +1,15 @@
 mixin news({day, title, href, description, image})
   .new
-    a.new__image-wrapper(href= href ? href : '#') 
+    a.new__image-wrapper(href= href ? href : "#") 
         img.new__image(src=`../images/${image}`, alt="")
     p.new__date #{day}
-    a.new__title(href= href ? href : '#') #{title}
+    a.new__title(href= href ? href : "#") #{title}
     p.new__description #{description}
-    a.new__readmore(href= href ? href : '#') Đọc tiếp  
+    a.new__readmore(href= href ? href : "#") Đọc tiếp  
 
 mixin posts({name, href, date, time, comment, image, description})
   .post-item
-    a.post-item__name(href= `${href}` ? `${href}` : '#') #{name}
+    a.post-item__name(href= `${href}` ? `${href}` : "#") #{name}
     .post-item__info
       p.post-item__date
         i.far.fa-calendar-minus.post-item__icon
@@ -20,6 +20,6 @@ mixin posts({name, href, date, time, comment, image, description})
       p.post-item__comment
         i.far.fa-comment-dots.post-item__icon
         | #{comment} Bình luận
-    a.post-item__image-wrapper(href= `${href}` ? `${href}` : '#')
+    a.post-item__image-wrapper(href= `${href}` ? `${href}` : "#")
       img.post-item__image(src=`../images/${image}.png`)  
     p.post-item__description #{description}
