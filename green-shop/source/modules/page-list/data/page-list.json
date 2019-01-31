@@ -6,8 +6,40 @@
         "url": "styleguide"
       },
       {
+        "title": "Home",
+        "url": "home"
+      },
+      {
+        "title": "Product List",
+        "url": "product"
+      },
+      {
+        "title": "Product Detail",
+        "url": "product-detail"
+      },
+      {
+        "title": "Cart",
+        "url": "cart"
+      },
+      {
+        "title": "News",
+        "url": "news"
+      },
+      {
+        "title": "New Detail",
+        "url": "new-detail"
+      },
+      {
         "title": "Login",
         "url": "login"
+      },
+      {
+        "title": "Register",
+        "url": "register"
+      },
+      {
+        "title": "Contact",
+        "url": "contact"
       }
     ]
   }

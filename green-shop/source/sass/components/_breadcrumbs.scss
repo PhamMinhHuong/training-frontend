@@ -1,0 +1,29 @@
+.breadcrumb-nav {
+  background: transparent;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 16px;
+  padding: 0 15px;
+
+  &__item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 150px;
+    font-size: $font-size-base;
+
+    &.active {
+      color: $green;
+    }
+  }
+
+  &__link {
+    color: $gray;
+    font-size: $font-size-base;
+
+    &:hover {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+}

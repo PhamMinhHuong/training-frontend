@@ -1,0 +1,98 @@
+// ======================================================
+// Pages :: Register
+// ======================================================
+
+.register {
+  @extend %wrapper;
+  $self: &;
+
+  margin-bottom: 80px;
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  &__form-row {
+    #{ $self }__form-group {
+      padding: 0 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    padding: 0 20px;
+  }
+
+  &__input {
+    border-radius: 0;
+    border: 1px solid rgba($gray, .3);
+  }
+
+  &__btn {
+    padding: 0 35px;
+
+    &--signup {
+      margin-left: 18px;
+    }
+  }
+
+  &__checkbox-label {
+    font-size: $font-size-base;
+    font-family: $font-family-second;
+    margin-bottom: 40px;
+  }
+
+  &__checkbox {
+    position: relative;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+
+    &:after {
+      @include pseudo;
+
+      width: 14px;
+      height: 14px;
+      border: 1px solid $black;
+      background: $body-color;
+    }
+
+    &:before {
+      @include pseudo;
+
+      opacity: 0;
+      transition: all .15s ease;
+      top: -8px;
+      left: 3px;
+      width: 10px;
+      height: 18px;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid $black;
+      border-right: 2px solid $black;
+      z-index: 100;
+      filter: drop-shadow(2px 2px 0 $white) drop-shadow(-2px -2px 0 $white);
+      transform: rotate(45deg);
+    }
+
+    &.active {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      outline: 0;
+      border: 0;
+    }
+  }
+
+  &__label {
+    font-size: $font-size-base;
+    color: $gray;
+    margin-bottom: 10px;
+
+    &:after {
+      content: ' *';
+      color: $red;
+    }
+  }
+}

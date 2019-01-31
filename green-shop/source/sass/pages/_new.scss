@@ -1,0 +1,20 @@
+// ======================================================
+// Page :: New
+// ======================================================
+
+.product-news {
+  @extend %wrapper;
+
+  flex-flow: column nowrap;
+
+  &__pagination {
+    display: flex;
+    margin-bottom: 80px;
+  }
+
+  &__sidebar-left {
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+}

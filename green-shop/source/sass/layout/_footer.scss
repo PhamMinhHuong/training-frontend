@@ -1,3 +1,310 @@
 // ======================================================
 // Layout :: Footer
 // ======================================================
+
+
+.footer {
+  background: $black-light;
+
+  &__copyright {
+    padding: 15px 0;
+    font-size: $font-size-sm;
+    color: $white;
+    background: $black-lighter;
+  }
+
+  @include respond-to(desktop-and-down) {
+    padding: 0 15px;
+  }
+}
+
+.footer-top {
+  border-bottom: 1px solid rgba($gray, .3);
+
+  &__content {
+    @extend %wrapper;
+
+    align-items: stretch;
+    flex-flow: row wrap;
+    padding: 30px 0;
+  }
+}
+
+.footer-middle {
+  border-bottom: 1px solid rgba($gray, .3);
+
+  &__content {
+    @extend %wrapper;
+
+    padding: 40px 0;
+    flex-flow: row wrap;
+  }
+}
+
+.footer-bottom {
+  &__content {
+    @extend %wrapper;
+  }
+}
+
+.footer-social-icon {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__text {
+    color: $gray;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    font-weight: $bold;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 5px;
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $gray;
+    padding: 0;
+    border-radius: 0;
+    margin-right: 25px;
+  }
+
+  &__icon {
+    transition: all .3s ease;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+    margin-bottom: 30px;
+
+    &__text {
+      color: $green;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer-email {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+
+  &__text {
+    font-size: $font-size-sm;
+    color: $gray;
+    text-transform: uppercase;
+    font-weight: $bold;
+    word-break: break-word;
+    max-width: 200px;
+  }
+
+  &__form {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    height: 46px;
+    width: 100%;
+    padding-left: 65px;
+  }
+
+  &__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    height: 46px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 46px;
+    background: $green;
+    border-radius: 0;
+  }
+
+  &__image {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include respond-to(phone-and-down) {
+    flex-flow: column nowrap;
+
+    &__form {
+      padding-left: 0;
+    }
+
+    &__text {
+      max-width: 100%;
+      color: $green;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__image {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    padding-right: 50px;
+    color: $gray-light;
+    margin-bottom: 10px;
+    line-height: 23px;
+    font-size: $font-size-base;
+    word-break: break-word;
+  }
+
+  &__icon {
+    font-size: $font-size-xs;
+    color: $green;
+    margin-right: 5px;
+  }
+
+  &__item {
+    color: $gray-light;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    word-break: break-all;
+  }
+
+  @include respond-to(tablet-and-down) {
+    margin-bottom: 30px;
+    text-align: center;
+
+    &__text {
+      padding-right: 0;
+    }
+
+    &__image {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      justify-content: center;
+    }
+  }
+}
+
+.footer-customer {
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 15px;
+
+  &__block {
+    flex: 1;
+
+    &:last-child {
+      flex: none;
+      margin-left: auto;
+    }
+  }
+
+  &__item {
+    margin-bottom: 6px;
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__title {
+    color: $green;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+    font-weight: $bold;
+    word-break: break-all;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    color: $gray-light;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: $font-size-base;
+    font-weight: $normal;
+    text-align: left;
+    word-break: break-all;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+
+    &__block {
+      flex: none;
+      width: 33.33%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @include respond-to(smallphone-and-down) {
+    &__block {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+.footer-question {
+  height: 66px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  &__btn {
+    width: 100%;
+    height: 100%;
+    color: $gray-light;
+    font-size: $font-size-base;
+    padding-left: 0;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.footer-bank {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &__btn {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

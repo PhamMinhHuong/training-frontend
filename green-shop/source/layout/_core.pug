@@ -2,12 +2,18 @@ include ../modules/page-list/_page-list
 include ../modules/_head
 include ../modules/_plugin
 include ../modules/_buttons
+include ../modules/_icons
+include ../modules/_titles
+include ../modules/_products
+include ../modules/_news
+include ../modules/_breadcrumbs
+include ../modules/_lists
+include ../modules/_comments
 
 doctype html
-html(lang='en')
+html(lang="en")
   head
     block head
   body
     block body
-
-    script(src="js/main.js")
+  +plugins()

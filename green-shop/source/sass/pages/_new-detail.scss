@@ -1,0 +1,142 @@
+// ======================================================
+// Pages :: New Detail
+// ======================================================
+
+.new-detail {
+  @extend %wrapper;
+
+  &__article {
+    margin-bottom: 12vh;
+  }
+
+  &__sidebar-left {
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name {
+    color: $text-dark;
+    font-size: $font-size-xl;
+    margin-bottom: 10px;
+    display: block;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $green;
+      text-decoration: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row nowrap;
+    color: $gray-light;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    color: $green;
+    font-size: $icon-size-sm;
+    margin-right: 10px;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    height: 380px;
+  }
+
+  &__text {
+    color: $gray;
+    margin-bottom: 30px;
+  }
+
+  &__date {
+    margin-right: 15px;
+    font-size: $font-size-sm;
+    color: $text-light;
+  }
+
+  &__time {
+    margin-right: 15px;
+    font-size: $font-size-sm;
+    color: $text-light;
+  }
+
+  &__comment {
+    margin-right: 15px;
+    font-size: $font-size-sm;
+    color: $text-light;
+  }
+
+  &__comment-compose {
+    margin-bottom: 40px;
+
+    .title {
+      color: $gray;
+    }
+  }
+
+  @include respond-to(smallphone-and-down) {
+    &__date {
+      margin-right: 10px;
+      font-size: $font-size-base;
+    }
+
+    &__time {
+      margin-right: 10px;
+      font-size: $font-size-base;
+    }
+
+    &__comment {
+      margin-right: 10px;
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.new-comment {
+  margin-bottom: 40px;
+
+  .title {
+    color: $gray;
+  }
+}
+
+.compose {
+  margin-bottom: 60px;
+
+  &__input {
+    height: 46px;
+    border: 1px solid $gray-lighter;
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      font-size: $font-size-base;
+      color: $black-lighter;
+    }
+  }
+
+  &__textarea {
+    border: 1px solid $gray-lighter;
+    background: transparent;
+    border-radius: 0;
+    min-height: 150px;
+    max-height: 250px;
+    margin-bottom: 10px;
+
+    &::placeholder {
+      font-size: $font-size-base;
+      color: $black-lighter;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    padding: 0 50px;
+  }
+}

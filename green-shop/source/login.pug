@@ -1,9 +1,41 @@
-extends layout/_page-no-header
+extends layout/_default
 
 block head
-  +head('Login')
+  +head("Green Shop | Đăng nhập")
 
-block main
-  p Login content here
-
-
+block body
+  block header
+    include layout/_header
+  block main
+    .main
+      .login
+        .login__wrapper.row
+          +breadcrumb(
+          ["Home", "Đăng nhập"],
+          ["home", "login"])
+          .col-12.col-md-6
+            h3.title.title--normal Thông tin cá nhân
+            form.login-form
+              .form-group.login-form__group
+                label.login-form__label(for="login-email") Email của bạn
+                input.form-control.login-form__input#login-email(type="email")
+              .form-group.login-form__group
+                label.login-form__label(for="login-password") Mật khẩu
+                input.form-control.login-form__input#login-password(type="password")
+              .login-form__group
+                input.login-form__checkbox#login-checker(type="checkbox")
+                label.login-form__checkbox-label(for="login-checker") Ghi nhớ tài khoản
+                a.login-form__link(href="#") Bạn quên mật khẩu ?
+              +buttons-link({
+                text: "Đăng nhập",
+                btnClass: "login-letter__btn btn-primary btn-primary--green"
+              })
+          .col-12.col-md-6.login-letter
+            h3.title.title--normal.login-letter__title Bạn chưa có tài khoản ?
+            p.login-letter__text Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
+            +buttons-link({
+              text: "Đăng ký",
+              btnClass: "login-letter__btn btn-primary btn-primary--green"
+            })
+  block footer
+    include layout/_footer

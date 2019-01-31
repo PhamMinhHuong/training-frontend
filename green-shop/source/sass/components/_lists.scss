@@ -1,0 +1,174 @@
+.sidebar-list {
+  margin-bottom: 40px;
+
+  &--default {
+    width: 100%;
+  }
+
+  &--color {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    font-size: $font-size-xxs;
+    transition: all .3s ease;
+    transform: translateY(-1px);
+  }
+
+  &__link {
+    color: $gray;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease;
+    font-size: $font-size-base;
+    font-family: $font-family-second;
+
+    &:hover {
+      text-decoration: none;
+      color: $green;
+
+      .sidebar-list__icon {
+        color: $green;
+      }
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba($gray, .15);
+  }
+
+  &__item.active {
+    .sidebar-list__link {
+      color: $green;
+    }
+
+    .sidebar-list__icon {
+      color: $green;
+    }
+  }
+
+  &--image {
+    .sidebar-list__item {
+      border-bottom: 0;
+
+      .sidebar-list__link {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+      }
+    }
+
+    .sidebar-list__text {
+      word-break: break-word;
+      font-size: $font-size-base;
+      font-family: $font-family-second;
+      flex: 1;
+    }
+
+    .sidebar-list__image-wrapper {
+      margin-right: 10px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--tag {
+    display: flex;
+    flex-flow: row wrap;
+
+    .sidebar-list__item {
+      max-width: 100%;
+      border-bottom: 0;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border: 1px solid rgba($gray, .3);
+
+      .sidebar-list__link {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        padding: 10px 20px;
+        transition: all .2s ease;
+        font-size: $font-size-base;
+        font-family: $font-family-second;
+
+        &.active {
+          color: $tag;
+          background: $green;
+        }
+
+        &:hover {
+          color: $tag;
+          background: $green;
+        }
+      }
+    }
+  }
+}
+
+.color-list {
+  $self: &;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 10px;
+
+  &__item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &:hover {
+      text-decoration: none;
+
+      #{ $self }__text {
+        color: $green;
+      }
+    }
+  }
+
+  &__text {
+    color: $gray;
+    transition: all .3s ease;
+    font-size: $font-size-base;
+    font-family: $font-family-second;
+  }
+
+  &__color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &--green {
+      background: $green;
+    }
+
+    &--orangered {
+      background: $orangered;
+    }
+
+    &--purple {
+      background: $purple;
+    }
+
+    &--blue {
+      background: $blue;
+    }
+
+    &--yellow {
+      background: $yellow;
+    }
+
+    &--pink {
+      background: $pink;
+    }
+  }
+}

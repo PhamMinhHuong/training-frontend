@@ -1,0 +1,243 @@
+// ======================================================
+// Pages :: Product Detail
+// ======================================================
+
+.product-detail {
+  @extend %wrapper;
+
+  flex-flow: column nowrap;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__category {
+    margin-bottom: 70px;
+
+    .title {
+      margin-bottom: 50px;
+    }
+
+    .product__slider {
+      &.slick-prev {
+        top: -66px;
+      }
+
+      &.slick-next {
+        top: -66px;
+      }
+    }
+  }
+
+  &__tab-info {
+    margin-bottom: 70px;
+  }
+
+  .nav {
+    height: 40px;
+  }
+
+  @include respond-to(tablet-and-down) {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    &__info {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include respond-to(smallphone-and-down) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.overview-slider {
+  margin-bottom: 100px;
+
+  &__main {
+    margin-bottom: 30px;
+  }
+
+  &__nav {
+    .overview-slider__image-wrapper {
+      margin: 0 5px;
+      width: 20%;
+    }
+
+    .slick-list {
+      margin: 0 -5px;
+    }
+  }
+}
+
+.product-info {
+  &__name {
+    font-size: $font-size-xl;
+    font-weight: $semibold;
+    font-family: $font-family-second;
+    color: $black;
+    text-transform: capitalize;
+  }
+
+  &__star {
+    color: $yellow;
+    font-size: $font-size-base;
+    margin: 10px 0;
+  }
+
+  &__price {
+    font-size: $font-size-xl;
+    color: $red;
+  }
+
+  &__old-price {
+    margin-left: 10px;
+    font-size: $font-size-sm;
+    color: $gray;
+    text-decoration: line-through;
+  }
+
+  &__description {
+    color: $gray;
+    padding: 24px 0;
+    margin: 21px 0;
+    border-top: 1px solid rgba($gray, .3);
+    border-bottom: 1px solid rgba($gray, .3);
+  }
+
+  &__count {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__actions {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 25px;
+
+    .product__like {
+      display: flex;
+      border: 1px solid rgba($gray, .3);
+
+      &:hover {
+        background: rgba($gray, .1);
+      }
+    }
+
+    .product__search {
+      border: 1px solid rgba($gray, .3);
+
+      &:hover {
+        background: rgba($gray, .1);
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
+
+.product-count {
+  align-items: center;
+  padding-bottom: 21px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba($gray, .3);
+
+  &__text {
+    margin-right: 30px;
+    font-size: $font-size-sm;
+    font-weight: $semibold;
+  }
+
+  &__value {
+    margin: 0 6px;
+    border-radius: 0;
+    border: 1px solid rgba($gray, .3);
+    width: 74px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    font-size: $font-size-sm;
+    color: $black;
+  }
+
+  &__btn {
+    font-size: $font-size-sm;
+    border-radius: 0;
+    border: 1px solid rgba($gray, .3);
+    width: 45px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    color: $black;
+    cursor: pointer;
+  }
+}
+
+.product-tab {
+  &__content {
+    border: 1px solid rgba($gray, .3);
+    border-top: 0;
+    padding: 43px;
+  }
+
+  &__text {
+    color: $gray-dark;
+    font-size: $font-size-base;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    padding: 10px 70px;
+    transition: all .3s ease;
+    font-size: $font-size-sm;
+
+    @include respond-to(tablet-and-down) {
+      padding: 10px 50px;
+    }
+
+    @include respond-to(phone-and-down) {
+      padding: 10px 20px;
+    }
+  }
+
+  .nav-tabs {
+    .nav-link {
+      border-radius: 0;
+      transition: all .15s ease;
+
+      &:hover {
+        border: 1px solid rgba($gray, .3);
+        border-bottom: 1px solid transparent;
+        color: $green;
+        cursor: pointer;
+      }
+
+      &.active {
+        border-top: 2px solid $gray;
+        color: $green;
+        background: transparent;
+        margin-top: -1px;
+      }
+    }
+  }
+}

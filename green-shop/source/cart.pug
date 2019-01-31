@@ -1,0 +1,73 @@
+extends layout/_default
+
+block head
+  +head("Green Shop | Giỏ hàng")
+
+block body
+  block header
+    include layout/_header
+  block main
+    .main
+      .product-cart
+        .product-cart__wrapper.row
+          +breadcrumb(
+          ["Home", "Giỏ hàng"],
+          ["home", "cart"])
+          h3.title.title--normal.col-12 Giỏ hàng
+          .product-cart__table.col-12
+            table.cart-table
+              thead.cart-table__head
+                tr.cart-table__row
+                  td.cart-table__cell Hình ảnh
+                  td.cart-table__cell Tên sản phẩm
+                  td.cart-table__cell Đơn giá
+                  td.cart-table__cell Số lượng
+                  td.cart-table__cell Thành tiền
+                  td.cart-table__cell Xóa
+              tbody.cart-table__body.cart-body
+                - for(i = 0; i < 3; i++)
+                  tr.cart-table__row
+                    td.cart-table__cell
+                      .cart-body__img-wrapper
+                        img.img-fluid(src="../images/sp01.png", alt="")
+                    td.cart-table__cell.cart-body__item-name Cây văn phòng
+                    td.cart-table__cell.cart-body__item-price 270.000 đ
+                    td.cart-table__cell
+                      p.cart-body__item-count 1
+                    td.cart-table__cell.cart-body__total-price 270.000 đ
+                    td.cart-table__cell
+                      +buttons({
+                        iconFont: "fas fa-trash-alt",
+                        iconSize: "lg",
+                        iconColor: "gray",
+                        iconClass: "cart-body__item-delete"
+                      })
+          .product-cart__actions.cart-actions.col-12
+            +buttons-link({
+              text: "hủy đơn hàng",
+              btnClass: "cart-actions__cancel btn-primary btn-primary--white"
+            })
+            +buttons-link({
+              text: "tiếp tục mua",
+              btnClass: "cart-actions__continue btn-primary btn-primary--green"
+            })
+          .product-cart__vat.col-12.col-md-auto.ml-md-auto
+            table.table-vat
+              tfoot.table-vat__foot
+                tr.table-vat__row.table-vat__row--green
+                  td.table-vat__cell Tổng phải thanh toán
+                  td.table-vat__cell 297.000 đ
+              tbody.table-vat__body
+                tr.table-vat__row
+                  td.table-vat__cell Tổng tiền ( chưa thuế )
+                  td.table-vat__cell 270.000 đ
+                tr.table-vat__row
+                  td.table-vat__cell Thuế ( VAT 10% )
+                  td.table-vat__cell 27.000 đ
+          .product-cart__checkout.col-12
+            +buttons({
+              text: "thanh toán",
+              btnClass: "btn-primary btn-primary--green"
+            })
+  block footer
+    include layout/_footer

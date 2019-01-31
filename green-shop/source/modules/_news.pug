@@ -1,0 +1,25 @@
+mixin news({day, title, href, description, image})
+  .new
+    a.new__image-wrapper(href= href ? href : "#") 
+        img.new__image(src=`../images/${image}`, alt="")
+    p.new__date #{day}
+    a.new__title(href= href ? href : "#") #{title}
+    p.new__description #{description}
+    a.new__readmore(href= href ? href : "#") Đọc tiếp  
+
+mixin posts({name, href, date, time, comment, image, description})
+  .post-item
+    a.post-item__name(href= `${href}` ? `${href}` : "#") #{name}
+    .post-item__info
+      p.post-item__date
+        i.far.fa-calendar-minus.post-item__icon
+        | #{date}
+      p.post-item__time
+        i.far.fa-clock.post-item__icon
+        | #{time} AM
+      p.post-item__comment
+        i.far.fa-comment-dots.post-item__icon
+        | #{comment} Bình luận
+    a.post-item__image-wrapper(href= `${href}` ? `${href}` : "#")
+      img.post-item__image(src=`../images/${image}.png`)  
+    p.post-item__description #{description}

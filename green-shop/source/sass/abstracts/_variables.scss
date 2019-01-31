@@ -5,12 +5,52 @@
 // Colors
 // Modifier variables of Boostrap 4
 // Detail: https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults
+
+$body-color: #f9f9f9;
 $white: #fff;
-$black: #000;
+$black-lightest: #434343;
+$black-lighter: #363533;
+$black-light: #313131;
+$black: #202020;
+$gray-lighter: #c2c2c2;
+$gray-light: #959595;
+$gray: #898989;
+$gray-dark: #7d7d7d;
+$green: #3fb871;
+$red: #d64146;
+$orangered: #f76d3c;
+$purple: #913ccd;
+$blue: #5481e6;
+$pink: #f15f74;
+$yellow: #febf01;
+$delete-text: #959595;
+$border: #e1e1e1;
+$tag: #ebebeb;
+$text-dark: #636363;
+$text-light: #b7b7b7;
 
 // Fonts
-$font-family-base: 'Hiragino Sans', 'Noto Sans Japanese', 'Yu Gothic', 'Meiryo', 'Hiragino Kaku Gothic Pro', '游ゴシック', 'メイリオ', 'MS ゴシック', 'sans-serif';
-$font-size-base: 14px;
+$font-family-base: 'Arial', 'sans-serif';
+$font-family-second: 'Roboto';
+$font-family-third: 'Roboto Slab';
+$font-size-xxs: 9px;
+$font-size-xs: 10px;
+$font-size-base: 12px;
+$font-size-base-small: 13px;
+$font-size-sm: 14px;
+$font-size-md: 15px;
+$font-size-lg: 16px;
+$font-size-xl: 18px;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+$icon-size-xs: 10px;
+$icon-size-sm: 12px;
+$icon-size-md: 16px;
+$icon-size-lg: 20px;
+// $font-family-base: 'Hiragino Sans', 'Noto Sans Japanese', 'Yu Gothic', 'Meiryo', 'Hiragino Kaku Gothic Pro', '游ゴシック', 'メイリオ', 'MS ゴシック', 'sans-serif';
+// $font-size-base: 14px;
 
 // Paths
 $path-image: '../images';

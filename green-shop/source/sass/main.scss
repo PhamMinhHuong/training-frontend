@@ -10,6 +10,8 @@
 @import 'bootstrap/scss/bootstrap-grid';
 @import 'bootstrap/scss/bootstrap-reboot';
 @import 'bootstrap/scss/bootstrap';
+@import 'slick-carousel/slick/slick.scss';
+@import 'slick-carousel/slick/slick-theme.scss';
 
 // 2. Extensions
 // ------------
@@ -32,17 +34,33 @@
 // 5. Layout
 // ---------
 @import 'layout/header';
-@import 'layout/sidebar';
 @import 'layout/footer';
-@import 'layout/content';
+@import 'layout/product-sidebar';
+@import 'layout/new-sidebar';
 
 // 6. Components
 // -------------
 @import 'components/buttons';
+@import 'components/icons';
+@import 'components/titles';
+@import 'components/products';
+@import 'components/breadcrumbs';
+@import 'components/lists';
+@import 'components/slick';
+@import 'components/news';
+@import 'components/comments';
 
 // 7. Pages
 // --------
 @import 'pages/home';
+@import 'pages/product';
+@import 'pages/product-detail';
+@import 'pages/cart';
+@import 'pages/new';
+@import 'pages/new-detail';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/contact';
 
 // 8. Themes
 // ---------
