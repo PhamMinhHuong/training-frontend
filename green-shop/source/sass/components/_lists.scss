@@ -112,6 +112,8 @@
 }
 
 .color-list {
+  $self: &;
+
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -122,6 +124,14 @@
     flex-flow: row nowrap;
     align-items: center;
     margin-bottom: 25px;
+
+    &:hover {
+      text-decoration: none;
+
+      #{ $self }__text {
+        color: $green;
+      }
+    }
   }
 
   &__text {
@@ -160,13 +170,5 @@
     &--pink {
       background: $pink;
     }
-  }
-}
-
-.color-list__item:hover {
-  text-decoration: none;
-
-  .color-list__text {
-    color: $green;
   }
 }

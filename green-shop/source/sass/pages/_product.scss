@@ -57,6 +57,7 @@
       width: 230px;
       height: auto;
       position: static;
+      margin: -1px;
       margin-bottom: 0;
 
       .product__image {
@@ -121,6 +122,12 @@
 
     .product__like {
       @extend .product__search;
+    }
+
+    .product__buy {
+      &:hover {
+        border: 1px solid rgba($green, 1);
+      }
     }
 
     @include respond-to(smallphone-and-down) {
